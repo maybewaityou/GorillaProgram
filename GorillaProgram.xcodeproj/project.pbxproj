@@ -14,6 +14,7 @@
 		60834B801CE41A7500B60AB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60834B7E1CE41A7500B60AB2 /* LaunchScreen.storyboard */; };
 		60834B8B1CE41A7500B60AB2 /* GorillaProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B8A1CE41A7500B60AB2 /* GorillaProgramTests.swift */; };
 		60834B961CE41A7500B60AB2 /* GorillaProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */; };
+		B44644DBC19CB437820BC5AC /* Pods_GorillaProgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5075779357778FEACD276C34 /* Pods_GorillaProgram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5075779357778FEACD276C34 /* Pods_GorillaProgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorillaProgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5637F5346A193DDA3AC087CD /* Pods-GorillaProgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaProgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram.debug.xcconfig"; sourceTree = "<group>"; };
 		60834B721CE41A7500B60AB2 /* GorillaProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B751CE41A7500B60AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60834B771CE41A7500B60AB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		60834B911CE41A7500B60AB2 /* GorillaProgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaProgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaProgramUITests.swift; sourceTree = "<group>"; };
 		60834B971CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaProgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44644DBC19CB437820BC5AC /* Pods_GorillaProgram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FA04875D6884A4B94F6DF56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5637F5346A193DDA3AC087CD /* Pods-GorillaProgram.debug.xcconfig */,
+				8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		60834B691CE41A7500B60AB2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				60834B891CE41A7500B60AB2 /* GorillaProgramTests */,
 				60834B941CE41A7500B60AB2 /* GorillaProgramUITests */,
 				60834B731CE41A7500B60AB2 /* Products */,
+				5FA04875D6884A4B94F6DF56 /* Pods */,
+				D73C4DE4DB2E0ED1FA7FC1AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = GorillaProgramUITests;
 			sourceTree = "<group>";
 		};
+		D73C4DE4DB2E0ED1FA7FC1AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5075779357778FEACD276C34 /* Pods_GorillaProgram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60834B9A1CE41A7500B60AB2 /* Build configuration list for PBXNativeTarget "GorillaProgram" */;
 			buildPhases = (
+				A0D62CB09489E2C48A704D4B /* 📦 Check Pods Manifest.lock */,
 				60834B6E1CE41A7500B60AB2 /* Sources */,
 				60834B6F1CE41A7500B60AB2 /* Frameworks */,
 				60834B701CE41A7500B60AB2 /* Resources */,
+				7ED781905FFED1974E43A9A6 /* 📦 Embed Pods Frameworks */,
+				911EE7116CA1E1D5A3FD106C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7ED781905FFED1974E43A9A6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		911EE7116CA1E1D5A3FD106C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0D62CB09489E2C48A704D4B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60834B6E1CE41A7500B60AB2 /* Sources */ = {
@@ -397,6 +472,7 @@
 		};
 		60834B9B1CE41A7500B60AB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5637F5346A193DDA3AC087CD /* Pods-GorillaProgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GorillaProgram/Info.plist;
@@ -408,6 +484,7 @@
 		};
 		60834B9C1CE41A7500B60AB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GorillaProgram/Info.plist;
@@ -482,6 +559,7 @@
 				60834B9C1CE41A7500B60AB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60834B9D1CE41A7500B60AB2 /* Build configuration list for PBXNativeTarget "GorillaProgramTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +568,7 @@
 				60834B9F1CE41A7500B60AB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60834BA01CE41A7500B60AB2 /* Build configuration list for PBXNativeTarget "GorillaProgramUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +577,7 @@
 				60834BA21CE41A7500B60AB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
