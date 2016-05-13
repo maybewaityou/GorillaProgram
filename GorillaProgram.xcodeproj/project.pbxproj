@@ -11,7 +11,6 @@
 		60834B961CE41A7500B60AB2 /* GorillaProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */; };
 		608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608867C61CE5CA7000B2F55C /* Assets.xcassets */; };
 		608867CC1CE5CA7000B2F55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608867C71CE5CA7000B2F55C /* LaunchScreen.storyboard */; };
-		608867CD1CE5CA7000B2F55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608867C91CE5CA7000B2F55C /* Main.storyboard */; };
 		6088687C1CE5D45600B2F55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6088686C1CE5D45600B2F55C /* AppDelegate.swift */; };
 		B44644DBC19CB437820BC5AC /* Pods_GorillaProgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5075779357778FEACD276C34 /* Pods_GorillaProgram.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +45,6 @@
 		60834B971CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608867C61CE5CA7000B2F55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		608867C81CE5CA7000B2F55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		608867CA1CE5CA7000B2F55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6088686C1CE5D45600B2F55C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaProgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +139,6 @@
 			children = (
 				608867C61CE5CA7000B2F55C /* Assets.xcassets */,
 				608867C71CE5CA7000B2F55C /* LaunchScreen.storyboard */,
-				608867C91CE5CA7000B2F55C /* Main.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -493,7 +490,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608867CD1CE5CA7000B2F55C /* Main.storyboard in Resources */,
 				608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */,
 				608867CC1CE5CA7000B2F55C /* LaunchScreen.storyboard in Resources */,
 			);
@@ -610,14 +606,6 @@
 				608867C81CE5CA7000B2F55C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		608867C91CE5CA7000B2F55C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				608867CA1CE5CA7000B2F55C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
