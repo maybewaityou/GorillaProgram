@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		60834B761CE41A7500B60AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B751CE41A7500B60AB2 /* AppDelegate.swift */; };
 		60834B781CE41A7500B60AB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B771CE41A7500B60AB2 /* ViewController.swift */; };
-		60834B7B1CE41A7500B60AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60834B791CE41A7500B60AB2 /* Main.storyboard */; };
-		60834B7D1CE41A7500B60AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60834B7C1CE41A7500B60AB2 /* Assets.xcassets */; };
-		60834B801CE41A7500B60AB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60834B7E1CE41A7500B60AB2 /* LaunchScreen.storyboard */; };
 		60834B8B1CE41A7500B60AB2 /* GorillaProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B8A1CE41A7500B60AB2 /* GorillaProgramTests.swift */; };
 		60834B961CE41A7500B60AB2 /* GorillaProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */; };
+		608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608867C61CE5CA7000B2F55C /* Assets.xcassets */; };
+		608867CC1CE5CA7000B2F55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608867C71CE5CA7000B2F55C /* LaunchScreen.storyboard */; };
+		608867CD1CE5CA7000B2F55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608867C91CE5CA7000B2F55C /* Main.storyboard */; };
 		B44644DBC19CB437820BC5AC /* Pods_GorillaProgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5075779357778FEACD276C34 /* Pods_GorillaProgram.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +40,6 @@
 		60834B721CE41A7500B60AB2 /* GorillaProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B751CE41A7500B60AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60834B771CE41A7500B60AB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		60834B7A1CE41A7500B60AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		60834B7C1CE41A7500B60AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		60834B7F1CE41A7500B60AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60834B811CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60834B861CE41A7500B60AB2 /* GorillaProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B8A1CE41A7500B60AB2 /* GorillaProgramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaProgramTests.swift; sourceTree = "<group>"; };
@@ -50,6 +47,9 @@
 		60834B911CE41A7500B60AB2 /* GorillaProgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaProgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaProgramUITests.swift; sourceTree = "<group>"; };
 		60834B971CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		608867C61CE5CA7000B2F55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		608867C81CE5CA7000B2F55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		608867CA1CE5CA7000B2F55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaProgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,11 +113,9 @@
 		60834B741CE41A7500B60AB2 /* GorillaProgram */ = {
 			isa = PBXGroup;
 			children = (
+				608867C51CE5CA7000B2F55C /* Resource */,
 				60834B751CE41A7500B60AB2 /* AppDelegate.swift */,
 				60834B771CE41A7500B60AB2 /* ViewController.swift */,
-				60834B791CE41A7500B60AB2 /* Main.storyboard */,
-				60834B7C1CE41A7500B60AB2 /* Assets.xcassets */,
-				60834B7E1CE41A7500B60AB2 /* LaunchScreen.storyboard */,
 				60834B811CE41A7500B60AB2 /* Info.plist */,
 			);
 			path = GorillaProgram;
@@ -139,6 +137,16 @@
 				60834B971CE41A7500B60AB2 /* Info.plist */,
 			);
 			path = GorillaProgramUITests;
+			sourceTree = "<group>";
+		};
+		608867C51CE5CA7000B2F55C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				608867C61CE5CA7000B2F55C /* Assets.xcassets */,
+				608867C71CE5CA7000B2F55C /* LaunchScreen.storyboard */,
+				608867C91CE5CA7000B2F55C /* Main.storyboard */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		D73C4DE4DB2E0ED1FA7FC1AC /* Frameworks */ = {
@@ -256,9 +264,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60834B801CE41A7500B60AB2 /* LaunchScreen.storyboard in Resources */,
-				60834B7D1CE41A7500B60AB2 /* Assets.xcassets in Resources */,
-				60834B7B1CE41A7500B60AB2 /* Main.storyboard in Resources */,
+				608867CD1CE5CA7000B2F55C /* Main.storyboard in Resources */,
+				608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */,
+				608867CC1CE5CA7000B2F55C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,20 +376,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		60834B791CE41A7500B60AB2 /* Main.storyboard */ = {
+		608867C71CE5CA7000B2F55C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				60834B7A1CE41A7500B60AB2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		60834B7E1CE41A7500B60AB2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60834B7F1CE41A7500B60AB2 /* Base */,
+				608867C81CE5CA7000B2F55C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		608867C91CE5CA7000B2F55C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				608867CA1CE5CA7000B2F55C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
