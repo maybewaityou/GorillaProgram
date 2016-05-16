@@ -42,10 +42,10 @@ class NavigationController: UINavigationController, UIGestureRecognizerDelegate,
             self.interactivePopGestureRecognizer?.enabled = false
         }
         if self.viewControllers.count > 0 {
-            //            let leftBar = UIBarButtonItem.itemWithImage("back", onClickListener: { [weak self] (_) -> Void in
-            //                self!.popViewControllerAnimated(true)
-            //                })
-            //            viewController.navigationItem.leftBarButtonItem = leftBar
+            let leftBar = UIBarButtonItem.itemWithImage("back", onClickListener: { [weak self] (_) -> Void in
+                self!.popViewControllerAnimated(true)
+                })
+            viewController.navigationItem.leftBarButtonItem = leftBar
             viewController.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
         }
         super.pushViewController(viewController, animated: animated)

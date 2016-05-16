@@ -42,6 +42,7 @@
 		603EE3221CE9722C0092ED3F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3211CE9722C0092ED3F /* TabBarController.swift */; };
 		603EE3241CE9724E0092ED3F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3231CE9724E0092ED3F /* NavigationController.swift */; };
 		603EE3261CE9952D0092ED3F /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3251CE9952D0092ED3F /* NetworkApi.swift */; };
+		603EE3281CE9999D0092ED3F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3271CE9999D0092ED3F /* UIBarButtonItem+Extension.swift */; };
 		60834B8B1CE41A7500B60AB2 /* GorillaProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B8A1CE41A7500B60AB2 /* GorillaProgramTests.swift */; };
 		60834B961CE41A7500B60AB2 /* GorillaProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */; };
 		608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608867C61CE5CA7000B2F55C /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		603EE3211CE9722C0092ED3F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		603EE3231CE9724E0092ED3F /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		603EE3251CE9952D0092ED3F /* NetworkApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
+		603EE3271CE9999D0092ED3F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		60834B721CE41A7500B60AB2 /* GorillaProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B811CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60834B861CE41A7500B60AB2 /* GorillaProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,9 +347,7 @@
 				608868621CE5D45600B2F55C /* Controller */,
 				608868641CE5D45600B2F55C /* Extension */,
 				608868651CE5D45600B2F55C /* Lib */,
-				608868681CE5D45600B2F55C /* Model */,
 				6088686B1CE5D45600B2F55C /* Other */,
-				6088686D1CE5D45600B2F55C /* Service */,
 				6088686F1CE5D45600B2F55C /* Utils */,
 				608868701CE5D45600B2F55C /* View */,
 				608868721CE5D45600B2F55C /* ViewModel */,
@@ -379,6 +379,7 @@
 				6013F1841CE95C170053F75F /* UIView+Extension.swift */,
 				6013F1861CE95F060053F75F /* UIWindow+Extension.swift */,
 				6013F1881CE95FA80053F75F /* UIColor+Extension.swift */,
+				603EE3271CE9999D0092ED3F /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -406,42 +407,12 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		608868681CE5D45600B2F55C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				608868691CE5D45600B2F55C /* DataModel */,
-				6088686A1CE5D45600B2F55C /* Protocol */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		608868691CE5D45600B2F55C /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataModel;
-			sourceTree = "<group>";
-		};
-		6088686A1CE5D45600B2F55C /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		6088686B1CE5D45600B2F55C /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				6088686C1CE5D45600B2F55C /* AppDelegate.swift */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		6088686D1CE5D45600B2F55C /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		6088686F1CE5D45600B2F55C /* Utils */ = {
@@ -694,6 +665,7 @@
 				6013F1831CE9563F0053F75F /* ScreenAdapter.swift in Sources */,
 				603EE3181CE96D910092ED3F /* HomeController.swift in Sources */,
 				6013F1AF1CE965A90053F75F /* Model.swift in Sources */,
+				603EE3281CE9999D0092ED3F /* UIBarButtonItem+Extension.swift in Sources */,
 				6013F1B11CE965E00053F75F /* Service.swift in Sources */,
 				6013F1BC1CE96ACB0053F75F /* NetworkService.swift in Sources */,
 				6013F1AB1CE9653B0053F75F /* ViewModelType.swift in Sources */,
