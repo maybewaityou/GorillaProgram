@@ -10,6 +10,7 @@
 		6013F1811CE953680053F75F /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1801CE953680053F75F /* Macros.swift */; };
 		6013F1831CE9563F0053F75F /* ScreenAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1821CE9563F0053F75F /* ScreenAdapter.swift */; };
 		6013F1851CE95C170053F75F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1841CE95C170053F75F /* UIView+Extension.swift */; };
+		6013F1871CE95F060053F75F /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1861CE95F060053F75F /* UIWindow+Extension.swift */; };
 		60834B8B1CE41A7500B60AB2 /* GorillaProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B8A1CE41A7500B60AB2 /* GorillaProgramTests.swift */; };
 		60834B961CE41A7500B60AB2 /* GorillaProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */; };
 		608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608867C61CE5CA7000B2F55C /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		6013F1801CE953680053F75F /* Macros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
 		6013F1821CE9563F0053F75F /* ScreenAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAdapter.swift; sourceTree = "<group>"; };
 		6013F1841CE95C170053F75F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6013F1861CE95F060053F75F /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		60834B721CE41A7500B60AB2 /* GorillaProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B811CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60834B861CE41A7500B60AB2 /* GorillaProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				6013F1841CE95C170053F75F /* UIView+Extension.swift */,
+				6013F1861CE95F060053F75F /* UIWindow+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6013F1831CE9563F0053F75F /* ScreenAdapter.swift in Sources */,
+				6013F1871CE95F060053F75F /* UIWindow+Extension.swift in Sources */,
 				6013F1811CE953680053F75F /* Macros.swift in Sources */,
 				6013F1851CE95C170053F75F /* UIView+Extension.swift in Sources */,
 				6088687C1CE5D45600B2F55C /* AppDelegate.swift in Sources */,
