@@ -21,7 +21,6 @@ struct RAC  {
         self.nilValue = nilValue
     }
     
-    
     func assignSignal(signal : RACSignal) {
         signal.setKeyPath(self.keyPath, onObject: self.target, nilValue: self.nilValue)
     }
