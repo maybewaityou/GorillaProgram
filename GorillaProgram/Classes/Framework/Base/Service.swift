@@ -1,5 +1,5 @@
 //
-//  BaseService.swift
+//  Service.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseService: ServiceType {
+class Service: ServiceType {
 
     // MARK: Properties
     weak var navController: UINavigationController!

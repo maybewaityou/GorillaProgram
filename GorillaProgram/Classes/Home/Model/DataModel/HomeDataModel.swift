@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeDataModel: BaseDataModel {
+class HomeDataModel: DataModel {
     
     func test() {
         print("=====>>> HomeDataModel")

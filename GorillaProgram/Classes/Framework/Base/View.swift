@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  View.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseView<VM: ViewModelType>: UIView {
+class View<VM: ViewModelType>: UIView {
 
     // MARK: Initialize
     init() {

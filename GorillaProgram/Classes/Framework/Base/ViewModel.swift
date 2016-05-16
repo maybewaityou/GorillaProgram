@@ -1,5 +1,5 @@
 //
-//  BaseViewModel.swift
+//  ViewModel.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewModel<S: ServiceType, DM: DataModelType>: ViewModelType {
+class ViewModel<S: ServiceType, DM: DataModelType>: ViewModelType {
     
     var dataModel: DM?
     var service: S!

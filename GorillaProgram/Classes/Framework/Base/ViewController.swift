@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  ViewController.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class BaseViewController<VM: ViewModelType, S: ServiceType, DM: DataModelType>: UIViewController {
+class ViewController<VM: ViewModelType, S: ServiceType, DM: DataModelType>: UIViewController {
 
     // MARK: Properties
     var dataModel: DM?
     var viewModel: VM!
     var service: S!
-    var customView: BaseView<VM>!
+    var customView: View<VM>!
     
     // MARK: Initialize
     init() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeView: BaseView<HomeViewModel<HomeService>> {
+class HomeView: View<HomeViewModel<HomeService>> {
 
     weak var viewModel: HomeViewModel<HomeService>?
     

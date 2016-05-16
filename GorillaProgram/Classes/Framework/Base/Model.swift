@@ -1,5 +1,5 @@
 //
-//  BaseModel.swift
+//  Model.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseModel: ModelType {
+class Model: ModelType {
 
     func setupData() {
         

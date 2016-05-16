@@ -1,5 +1,5 @@
 //
-//  BaseDataModel.swift
+//  DataModel.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class BaseDataModel: DataModelType {
+class DataModel: DataModelType {
 
 }

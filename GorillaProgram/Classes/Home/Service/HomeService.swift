@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeService: BaseService {
+class HomeService: Service {
 
     override func pushWithDataModel<DM : DataModelType>(dataModel: DM) {
         let controller = HomeController.init()
