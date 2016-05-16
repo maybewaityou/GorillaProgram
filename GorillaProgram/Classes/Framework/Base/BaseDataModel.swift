@@ -8,6 +8,6 @@
 
 import UIKit
 
-class BaseDataModel: DataModel {
+class BaseDataModel: DataModelType {
 
 }

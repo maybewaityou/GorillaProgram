@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  ViewModelType.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol ViewModel {
+protocol ViewModelType {
     
 }

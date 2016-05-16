@@ -12,9 +12,9 @@
 		6013F1851CE95C170053F75F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1841CE95C170053F75F /* UIView+Extension.swift */; };
 		6013F1871CE95F060053F75F /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1861CE95F060053F75F /* UIWindow+Extension.swift */; };
 		6013F1891CE95FA80053F75F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1881CE95FA80053F75F /* UIColor+Extension.swift */; };
-		6013F18F1CE9633A0053F75F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F18E1CE9633A0053F75F /* Model.swift */; };
-		6013F1911CE963840053F75F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1901CE963840053F75F /* DataModel.swift */; };
-		6013F1931CE963D00053F75F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1921CE963D00053F75F /* Service.swift */; };
+		6013F18F1CE9633A0053F75F /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F18E1CE9633A0053F75F /* ModelType.swift */; };
+		6013F1911CE963840053F75F /* DataModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1901CE963840053F75F /* DataModelType.swift */; };
+		6013F1931CE963D00053F75F /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1921CE963D00053F75F /* ServiceType.swift */; };
 		6013F19E1CE964070053F75F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6013F1941CE964070053F75F /* Alamofire.framework */; };
 		6013F19F1CE964070053F75F /* Aspects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6013F1951CE964070053F75F /* Aspects.framework */; };
 		6013F1A01CE964070053F75F /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6013F1961CE964070053F75F /* Async.framework */; };
@@ -25,7 +25,7 @@
 		6013F1A51CE964070053F75F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6013F19B1CE964070053F75F /* Result.framework */; };
 		6013F1A61CE964070053F75F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6013F19C1CE964070053F75F /* SnapKit.framework */; };
 		6013F1A71CE964070053F75F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6013F19D1CE964070053F75F /* SwiftyJSON.framework */; };
-		6013F1AB1CE9653B0053F75F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1AA1CE9653B0053F75F /* ViewModel.swift */; };
+		6013F1AB1CE9653B0053F75F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1AA1CE9653B0053F75F /* ViewModelType.swift */; };
 		6013F1AD1CE965840053F75F /* BaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1AC1CE965840053F75F /* BaseDataModel.swift */; };
 		6013F1AF1CE965A90053F75F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1AE1CE965A90053F75F /* BaseModel.swift */; };
 		6013F1B11CE965E00053F75F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1B01CE965E00053F75F /* BaseService.swift */; };
@@ -75,9 +75,9 @@
 		6013F1841CE95C170053F75F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6013F1861CE95F060053F75F /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		6013F1881CE95FA80053F75F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		6013F18E1CE9633A0053F75F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		6013F1901CE963840053F75F /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		6013F1921CE963D00053F75F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		6013F18E1CE9633A0053F75F /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		6013F1901CE963840053F75F /* DataModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelType.swift; sourceTree = "<group>"; };
+		6013F1921CE963D00053F75F /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		6013F1941CE964070053F75F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/GorillaProgram-elewsjusfuhzprfxmlxprupohkdh/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		6013F1951CE964070053F75F /* Aspects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aspects.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/GorillaProgram-elewsjusfuhzprfxmlxprupohkdh/Build/Products/Debug-iphonesimulator/Aspects/Aspects.framework"; sourceTree = "<group>"; };
 		6013F1961CE964070053F75F /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/GorillaProgram-elewsjusfuhzprfxmlxprupohkdh/Build/Products/Debug-iphonesimulator/AsyncSwift/Async.framework"; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		6013F19B1CE964070053F75F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/GorillaProgram-elewsjusfuhzprfxmlxprupohkdh/Build/Products/Debug-iphonesimulator/Result/Result.framework"; sourceTree = "<group>"; };
 		6013F19C1CE964070053F75F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/GorillaProgram-elewsjusfuhzprfxmlxprupohkdh/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		6013F19D1CE964070053F75F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/GorillaProgram-elewsjusfuhzprfxmlxprupohkdh/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		6013F1AA1CE9653B0053F75F /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6013F1AA1CE9653B0053F75F /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		6013F1AC1CE965840053F75F /* BaseDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataModel.swift; sourceTree = "<group>"; };
 		6013F1AE1CE965A90053F75F /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		6013F1B01CE965E00053F75F /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
@@ -171,10 +171,10 @@
 				6013F18C1CE9630E0053F75F /* Nullable */,
 				6013F1BA1CE96ACB0053F75F /* Network */,
 				6013F18D1CE9630E0053F75F /* Permission */,
-				6013F1901CE963840053F75F /* DataModel.swift */,
-				6013F18E1CE9633A0053F75F /* Model.swift */,
-				6013F1921CE963D00053F75F /* Service.swift */,
-				6013F1AA1CE9653B0053F75F /* ViewModel.swift */,
+				6013F1901CE963840053F75F /* DataModelType.swift */,
+				6013F18E1CE9633A0053F75F /* ModelType.swift */,
+				6013F1921CE963D00053F75F /* ServiceType.swift */,
+				6013F1AA1CE9653B0053F75F /* ViewModelType.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -697,14 +697,14 @@
 			files = (
 				603EE31A1CE96DF30092ED3F /* HomeService.swift in Sources */,
 				603EE31C1CE96EA20092ED3F /* HomeViewModel.swift in Sources */,
-				6013F18F1CE9633A0053F75F /* Model.swift in Sources */,
+				6013F18F1CE9633A0053F75F /* ModelType.swift in Sources */,
 				603EE31E1CE96F810092ED3F /* HomeDataModel.swift in Sources */,
 				6013F1831CE9563F0053F75F /* ScreenAdapter.swift in Sources */,
 				603EE3181CE96D910092ED3F /* HomeController.swift in Sources */,
 				6013F1AF1CE965A90053F75F /* BaseModel.swift in Sources */,
 				6013F1B11CE965E00053F75F /* BaseService.swift in Sources */,
 				6013F1BC1CE96ACB0053F75F /* NetworkService.swift in Sources */,
-				6013F1AB1CE9653B0053F75F /* ViewModel.swift in Sources */,
+				6013F1AB1CE9653B0053F75F /* ViewModelType.swift in Sources */,
 				6013F1AD1CE965840053F75F /* BaseDataModel.swift in Sources */,
 				6013F1B71CE969280053F75F /* BaseViewController.swift in Sources */,
 				6013F1871CE95F060053F75F /* UIWindow+Extension.swift in Sources */,
@@ -712,10 +712,10 @@
 				6013F1811CE953680053F75F /* Macros.swift in Sources */,
 				6013F1891CE95FA80053F75F /* UIColor+Extension.swift in Sources */,
 				6013F1B51CE968860053F75F /* NullableValue.swift in Sources */,
-				6013F1931CE963D00053F75F /* Service.swift in Sources */,
+				6013F1931CE963D00053F75F /* ServiceType.swift in Sources */,
 				603EE3221CE9722C0092ED3F /* TabBarController.swift in Sources */,
 				6013F1B31CE967DA0053F75F /* BaseViewModel.swift in Sources */,
-				6013F1911CE963840053F75F /* DataModel.swift in Sources */,
+				6013F1911CE963840053F75F /* DataModelType.swift in Sources */,
 				603EE3241CE9724E0092ED3F /* NavigationController.swift in Sources */,
 				6013F1B91CE969850053F75F /* BaseView.swift in Sources */,
 				603EE3201CE971E80092ED3F /* HomeView.swift in Sources */,

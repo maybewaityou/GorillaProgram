@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NullableValue: Model, ViewModel, Service, DataModel {
+class NullableValue: ModelType, ViewModelType, ServiceType, DataModelType {
     
     func getNetworkService() -> NetworkService {
         return NetworkServiceImpl.init()
@@ -16,7 +16,7 @@ class NullableValue: Model, ViewModel, Service, DataModel {
     
     func setupData() {}
     
-    func pushWithDataModel<DM : DataModel>(dataModel: DM) {}
+    func pushWithDataModel<DM : DataModelType>(dataModel: DM) {}
     
     func popViewController() {}
     

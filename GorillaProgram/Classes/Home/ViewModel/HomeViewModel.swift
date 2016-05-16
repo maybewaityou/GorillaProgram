@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewModel<S: Service>: BaseViewModel<S, HomeDataModel> {
+class HomeViewModel<S: ServiceType>: BaseViewModel<S, HomeDataModel> {
 
     // MARK: Properties
     

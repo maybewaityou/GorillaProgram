@@ -1,5 +1,5 @@
 //
-//  Service.swift
+//  ServiceType.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/5/16.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol Service {
+protocol ServiceType {
     
     func getNetworkService() -> NetworkService
     
-    func pushWithDataModel<DM : DataModel>(dataModel: DM)
+    func pushWithDataModel<DM : DataModelType>(dataModel: DM)
     
     func popViewController()
     

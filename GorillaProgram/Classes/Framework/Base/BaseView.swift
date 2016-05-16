@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseView<VM: ViewModel>: UIView {
+class BaseView<VM: ViewModelType>: UIView {
 
     // MARK: Initialize
     init() {

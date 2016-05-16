@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController<VM: ViewModel, S: Service, DM: DataModel>: UIViewController {
+class BaseViewController<VM: ViewModelType, S: ServiceType, DM: DataModelType>: UIViewController {
 
     // MARK: Properties
     var dataModel: DM?

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseService: Service {
+class BaseService: ServiceType {
 
     // MARK: Properties
     weak var navController: UINavigationController!
@@ -34,7 +34,7 @@ class BaseService: Service {
         navController.popToRootViewControllerAnimated(true)
     }
     
-    func pushWithDataModel<DM : DataModel>(dataModel: DM) {}
+    func pushWithDataModel<DM : DataModelType>(dataModel: DM) {}
     
     func controller() -> UIViewController {
         return navController

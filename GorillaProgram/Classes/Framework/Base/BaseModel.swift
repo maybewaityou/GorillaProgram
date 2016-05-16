@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseModel: Model {
+class BaseModel: ModelType {
 
     func setupData() {
         

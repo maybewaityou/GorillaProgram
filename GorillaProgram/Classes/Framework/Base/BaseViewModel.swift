@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewModel<S: Service, DM: DataModel>: ViewModel {
+class BaseViewModel<S: ServiceType, DM: DataModelType>: ViewModelType {
     
     var dataModel: DM?
     var service: S!
