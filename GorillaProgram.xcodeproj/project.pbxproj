@@ -49,6 +49,10 @@
 		608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608867C61CE5CA7000B2F55C /* Assets.xcassets */; };
 		608867CC1CE5CA7000B2F55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608867C71CE5CA7000B2F55C /* LaunchScreen.storyboard */; };
 		6088687C1CE5D45600B2F55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6088686C1CE5D45600B2F55C /* AppDelegate.swift */; };
+		60DB13071CE9AC4B006C8062 /* Method+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB13061CE9AC4B006C8062 /* Method+Swizzling.swift */; };
+		60DB130D1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB130B1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift */; };
+		60DB130E1CE9AD1A006C8062 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB130C1CE9AD1A006C8062 /* UIKit+Extensions.swift */; };
+		60DB13101CE9AD4A006C8062 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB130F1CE9AD4A006C8062 /* NSObject+Extension.swift */; };
 		B44644DBC19CB437820BC5AC /* Pods_GorillaProgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5075779357778FEACD276C34 /* Pods_GorillaProgram.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +124,10 @@
 		608867C61CE5CA7000B2F55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		608867C81CE5CA7000B2F55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6088686C1CE5D45600B2F55C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		60DB13061CE9AC4B006C8062 /* Method+Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Method+Swizzling.swift"; sourceTree = "<group>"; };
+		60DB130B1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReactiveCocoa+Extensions.swift"; sourceTree = "<group>"; };
+		60DB130C1CE9AD1A006C8062 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		60DB130F1CE9AD4A006C8062 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaProgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,10 +234,13 @@
 			isa = PBXGroup;
 			children = (
 				603EE3321CE99AE60092ED3F /* Service */,
+				60DB130A1CE9ACFD006C8062 /* RAC */,
 				603EE32A1CE99AD10092ED3F /* UIBarButtonItem+Extension.swift */,
 				603EE32B1CE99AD10092ED3F /* UIColor+Extension.swift */,
 				603EE32C1CE99AD10092ED3F /* UIView+Extension.swift */,
 				603EE32D1CE99AD10092ED3F /* UIWindow+Extension.swift */,
+				60DB13061CE9AC4B006C8062 /* Method+Swizzling.swift */,
+				60DB130F1CE9AD4A006C8062 /* NSObject+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -478,6 +489,15 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		60DB130A1CE9ACFD006C8062 /* RAC */ = {
+			isa = PBXGroup;
+			children = (
+				60DB130B1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift */,
+				60DB130C1CE9AD1A006C8062 /* UIKit+Extensions.swift */,
+			);
+			path = RAC;
+			sourceTree = "<group>";
+		};
 		D73C4DE4DB2E0ED1FA7FC1AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,13 +715,17 @@
 				6013F1BE1CE96AD40053F75F /* NetworkServiceImpl.swift in Sources */,
 				603EE3301CE99AD10092ED3F /* UIView+Extension.swift in Sources */,
 				6013F1811CE953680053F75F /* Macros.swift in Sources */,
+				60DB130E1CE9AD1A006C8062 /* UIKit+Extensions.swift in Sources */,
+				60DB13101CE9AD4A006C8062 /* NSObject+Extension.swift in Sources */,
 				6013F1B51CE968860053F75F /* NullableValue.swift in Sources */,
 				6013F1931CE963D00053F75F /* ServiceType.swift in Sources */,
+				60DB130D1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift in Sources */,
 				603EE32E1CE99AD10092ED3F /* UIBarButtonItem+Extension.swift in Sources */,
 				603EE3221CE9722C0092ED3F /* TabBarController.swift in Sources */,
 				6013F1B31CE967DA0053F75F /* ViewModel.swift in Sources */,
 				6013F1911CE963840053F75F /* DataModelType.swift in Sources */,
 				603EE3241CE9724E0092ED3F /* NavigationController.swift in Sources */,
+				60DB13071CE9AC4B006C8062 /* Method+Swizzling.swift in Sources */,
 				6013F1B91CE969850053F75F /* View.swift in Sources */,
 				603EE3201CE971E80092ED3F /* HomeView.swift in Sources */,
 				6088687C1CE5D45600B2F55C /* AppDelegate.swift in Sources */,
