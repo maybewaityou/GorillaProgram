@@ -8,10 +8,15 @@
 
 import UIKit
 
-class HomeViewModel: BaseViewModel<HomeService, HomeDataModel> {
+class HomeViewModel<S: Service>: BaseViewModel<S, HomeDataModel> {
 
     // MARK: Properties
     
+    
+    // MARK: Initialize
+    override init(service: S) {
+        super.init(service: service)
+    }
     
     // MARK: Private Method
     override func initDatas() {

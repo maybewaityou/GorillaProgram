@@ -11,7 +11,7 @@ import UIKit
 class HomeService: BaseService {
 
     override func pushWithDataModel<DM : DataModel>(dataModel: DM) {
-        let controller = UIViewController.init()
+        let controller = HomeController.init()
         
         navController.pushViewController(controller, animated: true)
     }

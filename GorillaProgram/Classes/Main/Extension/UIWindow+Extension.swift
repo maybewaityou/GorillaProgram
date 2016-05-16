@@ -11,7 +11,8 @@ import UIKit
 extension UIWindow {
     
     func switchRootController() {
-        
+        let tabBarController = TabBarController()
+        rootViewController = tabBarController
     }
     
 }
