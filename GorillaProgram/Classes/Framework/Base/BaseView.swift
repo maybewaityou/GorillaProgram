@@ -16,10 +16,6 @@ class BaseView<VM: ViewModel>: UIView {
         initialize()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     // MARK: Private Method
     private func initialize() {
         initDatas()

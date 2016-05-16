@@ -10,24 +10,34 @@ import UIKit
 
 struct BaseService: Service {
 
-//    func getNetworkService() -> NetworkService {
-//        return nil
-//    }
+    // MARK: Properties
+    weak var navController: UINavigationController!
+    var service: NetworkServiceImpl = {
+        return NetworkServiceImpl()
+    }()
     
-    func pushWithDataModel<DM : DataModel>(dataModel: DM) {
-        
+    // MARK: Initialize
+    init(navController: UINavigationController) {
+        self.navController = navController
+    }
+    
+    // MARK: Private Method
+    func getNetworkService() -> NetworkService {
+        return service
     }
     
     func popViewController() {
-        
+        navController.popViewControllerAnimated(true)
     }
     
     func popToRootViewController() {
-        
+        navController.popToRootViewControllerAnimated(true)
     }
     
-//    func controller() -> UIViewController {
-//        
-//    }
+    func pushWithDataModel<DM : DataModel>(dataModel: DM) {}
+    
+    func controller() -> UIViewController {
+        return navController
+    }
     
 }
