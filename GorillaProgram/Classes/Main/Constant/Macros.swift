@@ -40,18 +40,18 @@ let textSmallSize: CGFloat = 14.0
 /*============================================================================*/
 
 /*============================================================================*/
-//let defaultBackgroundColor = UIColor.whiteColor()
-//let titleBackgroundColor = UIColor.init(hexString: "#009271")
-//let titleTextColor = UIColor.white()
-//let darkGreenColor = UIColor.init(hexString: "#009271")!
-//let tabBarItemTextColor = UIColor.init(hexString: "#505050")
-//let tabBarItemSelectedTextColor = UIColor.init(hexString: "#009271")
-//let defaultColor = UIColor.init(hexString: "#bebebe")
-//let buttonTextColor = UIColor.white()
-//let defaultTextColor = UIColor.init(hexString: "#505050")
-//let lightTextColor = UIColor.white()
-//let orangeColor = UIColor.init(hexString: "#f86722")
-//let lightGreenColor = UIColor.init(hexString: "#009271")
+let defaultBackgroundColor = UIColor.whiteColor()
+let titleBackgroundColor = UIColor.init(hexString: "#009271")
+let titleTextColor = UIColor.white()
+let darkGreenColor = UIColor.init(hexString: "#009271")!
+let tabBarItemTextColor = UIColor.init(hexString: "#505050")
+let tabBarItemSelectedTextColor = UIColor.init(hexString: "#009271")
+let defaultColor = UIColor.init(hexString: "#bebebe")
+let buttonTextColor = UIColor.white()
+let defaultTextColor = UIColor.init(hexString: "#505050")
+let lightTextColor = UIColor.white()
+let orangeColor = UIColor.init(hexString: "#f86722")
+let lightGreenColor = UIColor.init(hexString: "#009271")
 /*============================================================================*/
 
 /*============================================================================*/
