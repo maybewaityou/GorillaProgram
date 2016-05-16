@@ -7,7 +7,10 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 protocol NetworkService {
+    
+    func signalWithRequestMethid(method: RequestMethod, url: String, params: Dictionary<String, String>) -> RACSignal
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: ViewController<HomeViewModel, Service, HomeDataModel> {
+class HomeController: ViewController<HomeViewModel, HomeDataModel> {
 
     // MARK: Initialize
     override init() {

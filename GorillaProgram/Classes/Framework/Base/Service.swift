@@ -41,11 +41,9 @@ class Service: ServiceType {
     func pushWithDataModel<DM : DataModel>(dataModel: DM) {
         switch(dataModel.type) {
         case .Home:
-            print("=====>>> \(dataModel.type.rawValue)")
+            let controller = HomeController.init()
+            navController.pushViewController(controller, animated: true)
         }
-        let controller = HomeController.init()
-        navController.pushViewController(controller, animated: true)
-        
     }
     
     deinit {

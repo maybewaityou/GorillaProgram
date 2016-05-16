@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController<VM: ViewModelType, S: ServiceType, DM: DataModelType>: UIViewController {
+class ViewController<VM: ViewModelType, DM: DataModelType>: UIViewController {
 
     // MARK: Properties
     var dataModel: DM?
     var viewModel: VM!
-    var service: S!
+    var service: Service!
     var customView: View<VM>!
     
     // MARK: Initialize
