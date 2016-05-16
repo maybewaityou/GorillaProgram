@@ -34,10 +34,22 @@ class Service: ServiceType {
         navController.popToRootViewControllerAnimated(true)
     }
     
-    func pushWithDataModel<DM : DataModelType>(dataModel: DM) {}
-    
     func controller() -> UIViewController {
         return navController
+    }
+
+    func pushWithDataModel<DM : DataModel>(dataModel: DM) {
+        switch(dataModel.type) {
+        case .Home:
+            print("=====>>> \(dataModel.type.rawValue)")
+        }
+        let controller = HomeController.init()
+        navController.pushViewController(controller, animated: true)
+        
+    }
+    
+    deinit {
+        print("== deinit ===>>> \(self)")
     }
     
 }

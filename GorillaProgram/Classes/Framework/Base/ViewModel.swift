@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ViewModel<S: ServiceType, DM: DataModelType>: ViewModelType {
+class ViewModel<DM: DataModelType>: ViewModelType {
     
     var dataModel: DM?
-    var service: S!
+    var service: Service!
     
     // MARK: Initialize
-    init(service: S) {
+    init(service: Service) {
         self.service = service
         initialize()
     }
     
-    init(service: S, dataModel: DM) {
+    init(service: Service, dataModel: DM) {
         self.service = service
         self.dataModel = dataModel
         initialize()

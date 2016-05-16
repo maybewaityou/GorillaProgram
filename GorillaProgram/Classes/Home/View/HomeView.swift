@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomeView: View<HomeViewModel<HomeService>> {
+class HomeView: View<HomeViewModel> {
 
-    weak var viewModel: HomeViewModel<HomeService>?
+    weak var viewModel: HomeViewModel?
     
     // MARK: Properties
     lazy private var button: UIButton = {
@@ -26,7 +26,7 @@ class HomeView: View<HomeViewModel<HomeService>> {
     }
     
     // MARK: Private Method
-    override func bindWithViewModel(viewModel: HomeViewModel<HomeService>) {
+    override func bindWithViewModel(viewModel: HomeViewModel) {
         self.viewModel = viewModel
         button.addTarget(self, action: #selector(HomeView.onClick), forControlEvents: .TouchUpInside)
     }
@@ -40,7 +40,7 @@ class HomeView: View<HomeViewModel<HomeService>> {
     }
     
     func onClick() {
-        viewModel?.haha()
+        viewModel!.haha()
     }
     
     deinit {

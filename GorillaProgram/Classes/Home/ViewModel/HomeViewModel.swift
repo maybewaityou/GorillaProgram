@@ -8,13 +8,13 @@
 
 import UIKit
 
-class HomeViewModel<S: ServiceType>: ViewModel<S, HomeDataModel> {
+class HomeViewModel: ViewModel<HomeDataModel> {
 
     // MARK: Properties
     
     
     // MARK: Initialize
-    override init(service: S) {
+    override init(service: Service) {
         super.init(service: service)
     }
     
@@ -24,7 +24,7 @@ class HomeViewModel<S: ServiceType>: ViewModel<S, HomeDataModel> {
     }
     
     func haha() {
-        let dataModel = HomeDataModel.init()
+        let dataModel = HomeDataModel.init(type: .Home)
         service.pushWithDataModel(dataModel)
     }
     

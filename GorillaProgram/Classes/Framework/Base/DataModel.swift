@@ -8,6 +8,18 @@
 
 import UIKit
 
-class DataModel: DataModelType {
+enum DataModelEnum: String {
+    case Home = "home"
+    
+    
+}
 
+class DataModel: DataModelType {
+    
+    let type: DataModelEnum
+    
+    init(type: DataModelEnum) {
+        self.type = type
+    }
+    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: ViewController<HomeViewModel<HomeService>, HomeService, HomeDataModel> {
+class HomeController: ViewController<HomeViewModel, Service, HomeDataModel> {
 
     // MARK: Initialize
     override init() {
@@ -17,7 +17,7 @@ class HomeController: ViewController<HomeViewModel<HomeService>, HomeService, Ho
     
     // MARK: Private Method
     override func initDatas() {
-        service = HomeService.init(navController: navigationController!)
+        service = Service.init(navController: navigationController!)
         viewModel = HomeViewModel.init(service: service)
         customView = HomeView.init()
     }

@@ -12,7 +12,7 @@ protocol ServiceType {
     
     func getNetworkService() -> NetworkService
     
-    func pushWithDataModel<DM : DataModelType>(dataModel: DM)
+    func pushWithDataModel<DM : DataModel>(dataModel: DM)
     
     func popViewController()
     
