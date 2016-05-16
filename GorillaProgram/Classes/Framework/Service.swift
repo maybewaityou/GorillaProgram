@@ -10,14 +10,14 @@ import UIKit
 
 protocol Service {
     
-    func getNetworkService() -> NetworkService
+//    func getNetworkService() -> NetworkService
     
-    func pushWithDataModel(dataModel: AnyObject)
+    func pushWithDataModel<DM : DataModel>(dataModel: DM)
     
     func popViewController()
     
     func popToRootViewController()
     
-    func controller() -> UIViewController
+//    func controller() -> UIViewController
     
 }
