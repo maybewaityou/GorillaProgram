@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class HomeViewModel: ViewModel<HomeDataModel> {
 
     // MARK: Properties
-    
+    var buttonCommand: RACCommand?
     
     // MARK: Initialize
     override init(service: Service) {
@@ -20,12 +21,19 @@ class HomeViewModel: ViewModel<HomeDataModel> {
     
     // MARK: Private Method
     override func initDatas() {
-        
+        buttonCommand = RACCommand.init(signalBlock: { [weak self] (_) -> RACSignal! in
+            return self!.buttonCommandExecute()
+        })
     }
     
-    func haha() {
+    private func buttonCommandExecute() -> RACSignal {
         let dataModel = HomeDataModel.init(type: .Home)
         service.pushWithDataModel(dataModel)
+        return service.getNetworkService()
+            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""])
+            .doNext({ (result) in
+                
+            })
     }
     
     deinit {

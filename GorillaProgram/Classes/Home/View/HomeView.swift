@@ -28,7 +28,7 @@ class HomeView: View<HomeViewModel> {
     // MARK: Private Method
     override func bindWithViewModel(viewModel: HomeViewModel) {
         self.viewModel = viewModel
-        button.addTarget(self, action: #selector(HomeView.onClick), forControlEvents: .TouchUpInside)
+        button.rac_command = viewModel.buttonCommand
     }
     
     override func initDatas() {
@@ -37,10 +37,6 @@ class HomeView: View<HomeViewModel> {
     
     override func setupViews() {
         button.frame = CGRectMake(80, 80, 200, 44)
-    }
-    
-    func onClick() {
-        viewModel!.haha()
     }
     
     deinit {

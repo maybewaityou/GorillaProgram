@@ -3,7 +3,7 @@ PODS:
   - Aspects (1.4.1)
   - AsyncSwift (1.7.2)
   - Device (1.0.1)
-  - Kingfisher (2.4.0)
+  - Kingfisher (2.4.1)
   - MJRefresh (3.1.0)
   - ReactiveCocoa (4.1.0):
     - ReactiveCocoa/UI (= 4.1.0)
@@ -17,7 +17,7 @@ PODS:
     - ReactiveCocoa/Core
     - Result (~> 2.0)
   - Result (2.0.0)
-  - SnapKit (0.20.0)
+  - SnapKit (0.21.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -36,11 +36,11 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   Device: 7ed5b87db148886e8c3cbcdde5dc997baddbe10b
-  Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
+  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
-  SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
+  SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 PODFILE CHECKSUM: c4df0b43d3f8f2fb4ebdbb99b2d5f5c771f33653
