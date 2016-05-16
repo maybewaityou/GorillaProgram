@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct BaseService: Service {
+class BaseService: Service {
 
     // MARK: Properties
     weak var navController: UINavigationController!

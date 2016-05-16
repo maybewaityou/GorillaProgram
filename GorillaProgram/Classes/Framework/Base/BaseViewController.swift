@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BaseViewController<DM: DataModel, VM: ViewModel, S: Service>: UIViewController {
+class BaseViewController<VM: ViewModel, S: Service, DM: DataModel>: UIViewController {
 
     // MARK: Properties
-    var dataModel: DM!
+    var dataModel: DM?
     var viewModel: VM!
     var service: S!
     var customView: BaseView<VM>!
