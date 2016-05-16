@@ -9,7 +9,7 @@
 import UIKit
 
 class Service: ServiceType {
-
+    
     // MARK: Properties
     weak var navController: UINavigationController!
     var service: NetworkServiceImpl = {
@@ -19,23 +19,6 @@ class Service: ServiceType {
     // MARK: Initialize
     init(navController: UINavigationController) {
         self.navController = navController
-    }
-    
-    // MARK: Private Method
-    func getNetworkService() -> NetworkService {
-        return service
-    }
-    
-    func popViewController() {
-        navController.popViewControllerAnimated(true)
-    }
-    
-    func popToRootViewController() {
-        navController.popToRootViewControllerAnimated(true)
-    }
-    
-    func controller() -> UIViewController {
-        return navController
     }
 
     func pushWithDataModel<DM : DataModel>(dataModel: DM) {
