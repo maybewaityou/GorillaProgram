@@ -11,6 +11,7 @@ import Device
 
 struct ScreenAdapter {
     
+    
     static var p_1: Int {
         get {
             return 1
