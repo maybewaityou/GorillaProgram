@@ -16,6 +16,7 @@ public enum RequestMethod: String {
 
 class NetworkApi: NSObject {
 
+/*====================================== Common Method Start ======================================*/
     /** 配置证书 */
     class func configureCertificate() {
         allowAllCertificate()
@@ -39,8 +40,9 @@ class NetworkApi: NSObject {
             })
         })
     }
-  
-/*============================================================================*/
+/*====================================== Common Method End ======================================*/
+    
+/*====================================== Private Method Start ======================================*/
     // Get请求
     private class func getJsonWithRequest(url: String, completionHandler: Response<AnyObject, NSError> -> Void) {
         Alamofire.request(.GET, url).responseJSON(completionHandler: completionHandler);
@@ -63,10 +65,11 @@ class NetworkApi: NSObject {
             postJsonWithRequest(url, params: params, completionHandler: completionHandler)
         }
     }
-/*============================================================================*/
-/*============================================================================*/
+/*====================================== Private Method End ======================================*/
+    
+/*====================================== Configure Certificate Start ======================================*/
     /** 允许所有证书 */
-    class func allowAllCertificate() {
+    private class func allowAllCertificate() {
         let manager = Manager.sharedInstance
         manager.delegate.sessionDidReceiveChallenge = { session, challenge in
             var disposition: NSURLSessionAuthChallengeDisposition = .PerformDefaultHandling
@@ -89,6 +92,6 @@ class NetworkApi: NSObject {
             return (disposition, credential)
         }
     }
-/*============================================================================*/
+/*====================================== Configure Certificate Start ======================================*/
     
 }
