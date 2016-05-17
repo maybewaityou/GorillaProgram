@@ -109,6 +109,7 @@
 		6013F1BD1CE96AD40053F75F /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
 		601918241CEB0153008454DB /* ModelAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelAdapter.swift; sourceTree = "<group>"; };
 		601918261CEB0C7C008454DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6019182C1CEB18B6008454DB /* GorillaProgram-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GorillaProgram-Bridging-Header.h"; sourceTree = "<group>"; };
 		603EE3171CE96D910092ED3F /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		603EE31B1CE96EA20092ED3F /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		603EE31D1CE96F810092ED3F /* HomeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
@@ -418,6 +419,7 @@
 			children = (
 				6013F1801CE953680053F75F /* Macros.swift */,
 				6013F1821CE9563F0053F75F /* ScreenAdapter.swift */,
+				6019182C1CEB18B6008454DB /* GorillaProgram-Bridging-Header.h */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -903,10 +905,13 @@
 			baseConfigurationReference = 5637F5346A193DDA3AC087CD /* Pods-GorillaProgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GorillaProgram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.GorillaProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GorillaProgram/Classes/Main/Constant/GorillaProgram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -915,10 +920,12 @@
 			baseConfigurationReference = 8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GorillaProgram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.GorillaProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GorillaProgram/Classes/Main/Constant/GorillaProgram-Bridging-Header.h";
 			};
 			name = Release;
 		};

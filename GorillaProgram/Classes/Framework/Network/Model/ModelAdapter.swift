@@ -38,8 +38,11 @@ class ModelAdapter {
             "        }\n" +
             "    ]\n" +
         "}"
+        
+        
+        
         let json = JSON.init(str)
-        setupData(dictWithJSON(json), model: User())
+        setupData(dictWithJSON(json), model: model)
         return model
     }
     
