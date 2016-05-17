@@ -32,7 +32,6 @@ class NetworkApi: NSObject {
                 
                 subscriber.sendNext(ModelAdapter.model(response, model: model))
                 subscriber.sendCompleted()
-                
             })
             return RACDisposable.init(block: { () -> Void in
             })
