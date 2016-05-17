@@ -17,9 +17,6 @@ class ModelAdapter {
      let github = ModelAdapter.model(response, model: Github()) */
     class func model<M: Model>(response: Response<AnyObject, NSError>, model: M) -> M {
         let result = response.result.value!
-        
-        print("=====>>> \(result)")
-        
         let json = JSON.init(result)
         setupData(json.dictionaryValue, model: model)
         return model

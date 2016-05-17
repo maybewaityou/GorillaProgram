@@ -30,6 +30,8 @@ class NetworkApi: NSObject {
         return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
             sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
                 
+                print("=====>>> \(response.result.value!)")
+                
                 subscriber.sendNext(ModelAdapter.model(response, model: model))
                 subscriber.sendCompleted()
             })
