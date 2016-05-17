@@ -29,10 +29,11 @@ class NetworkApi: NSObject {
         print("== params ===>>> \(params)")
         return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
             sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
+                let result = response.result.value!
                 
-                print("=====>>> \(response.result.value!)")
+                print("=====>>> \(result)")
                 
-                subscriber.sendNext(ModelAdapter.model(response, model: model))
+                subscriber.sendNext(ModelAdapter.model(result, model: model))
                 subscriber.sendCompleted()
             })
             return RACDisposable.init(block: { () -> Void in

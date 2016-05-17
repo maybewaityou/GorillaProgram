@@ -9,14 +9,12 @@
 import UIKit
 import ReactiveCocoa
 import SwiftyJSON
-import Alamofire
 
 class ModelAdapter {
     
     /** 字典转模型
-     let github = ModelAdapter.model(response, model: Github()) */
-    class func model<M: Model>(response: Response<AnyObject, NSError>, model: M) -> M {
-        let result = response.result.value!
+     let github = ModelAdapter.model(result, model: Github()) */
+    class func model<M: Model>(result: AnyObject, model: M) -> M {
         let json = JSON.init(result)
         setupData(json.dictionaryValue, model: model)
         return model
