@@ -38,7 +38,7 @@ class NetworkApi: NSObject {
         })
     }
 /*====================================== Common Method End ======================================*/
-    
+
 /*====================================== Private Method Start ======================================*/
     // Get请求
     private class func getJsonWithRequest(url: String, completionHandler: Response<AnyObject, NSError> -> Void) {
@@ -63,7 +63,7 @@ class NetworkApi: NSObject {
         }
     }
 /*====================================== Private Method End ======================================*/
-    
+
 /*====================================== Configure Certificate Start ======================================*/
     /** 允许所有证书 */
     private class func allowAllCertificate() {
