@@ -32,6 +32,7 @@
 		6013F1B91CE969850053F75F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1B81CE969850053F75F /* View.swift */; };
 		6013F1BC1CE96ACB0053F75F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1BB1CE96ACB0053F75F /* NetworkService.swift */; };
 		6013F1BE1CE96AD40053F75F /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6013F1BD1CE96AD40053F75F /* NetworkServiceImpl.swift */; };
+		601918251CEB0153008454DB /* ModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601918241CEB0153008454DB /* ModelAdapter.swift */; };
 		603EE3181CE96D910092ED3F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3171CE96D910092ED3F /* HomeController.swift */; };
 		603EE31C1CE96EA20092ED3F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE31B1CE96EA20092ED3F /* HomeViewModel.swift */; };
 		603EE31E1CE96F810092ED3F /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE31D1CE96F810092ED3F /* HomeDataModel.swift */; };
@@ -56,7 +57,6 @@
 		60DB13121CE9B301006C8062 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB13111CE9B301006C8062 /* RAC.swift */; };
 		60DB13141CE9B31C006C8062 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB13131CE9B31C006C8062 /* RACObserve.swift */; };
 		60DB13161CE9B334006C8062 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB13151CE9B334006C8062 /* RACSignal+Extensions.swift */; };
-		60EC72551CEAB75300134EE9 /* ModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC72541CEAB75300134EE9 /* ModelAdapter.swift */; };
 		60EC72571CEABA4200134EE9 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC72561CEABA4200134EE9 /* Github.swift */; };
 		B44644DBC19CB437820BC5AC /* Pods_GorillaProgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5075779357778FEACD276C34 /* Pods_GorillaProgram.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +106,7 @@
 		6013F1B81CE969850053F75F /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		6013F1BB1CE96ACB0053F75F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6013F1BD1CE96AD40053F75F /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
+		601918241CEB0153008454DB /* ModelAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelAdapter.swift; sourceTree = "<group>"; };
 		603EE3171CE96D910092ED3F /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		603EE31B1CE96EA20092ED3F /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		603EE31D1CE96F810092ED3F /* HomeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
@@ -136,7 +137,6 @@
 		60DB13111CE9B301006C8062 /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
 		60DB13131CE9B31C006C8062 /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
 		60DB13151CE9B334006C8062 /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Extensions.swift"; sourceTree = "<group>"; };
-		60EC72541CEAB75300134EE9 /* ModelAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelAdapter.swift; sourceTree = "<group>"; };
 		60EC72561CEABA4200134EE9 /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		8BBB65F0B8DE1FC2F7F96F07 /* Pods-GorillaProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaProgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaProgram/Pods-GorillaProgram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,11 +233,20 @@
 		6013F1BA1CE96ACB0053F75F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				601918231CEB0153008454DB /* Model */,
 				6013F1BB1CE96ACB0053F75F /* NetworkService.swift */,
 				6013F1BD1CE96AD40053F75F /* NetworkServiceImpl.swift */,
 				603EE3251CE9952D0092ED3F /* NetworkApi.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		601918231CEB0153008454DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				601918241CEB0153008454DB /* ModelAdapter.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		603EE3291CE99AA10092ED3F /* Extension */ = {
@@ -516,7 +525,6 @@
 		60EC72531CEAB74700134EE9 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				60EC72541CEAB75300134EE9 /* ModelAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -727,6 +735,7 @@
 				6013F1831CE9563F0053F75F /* ScreenAdapter.swift in Sources */,
 				603EE3181CE96D910092ED3F /* HomeController.swift in Sources */,
 				6013F1AF1CE965A90053F75F /* Model.swift in Sources */,
+				601918251CEB0153008454DB /* ModelAdapter.swift in Sources */,
 				6013F1B11CE965E00053F75F /* Service.swift in Sources */,
 				603EE3341CE99AFB0092ED3F /* Service+common.swift in Sources */,
 				60DB13161CE9B334006C8062 /* RACSignal+Extensions.swift in Sources */,
@@ -756,7 +765,6 @@
 				6013F1B91CE969850053F75F /* View.swift in Sources */,
 				603EE3201CE971E80092ED3F /* HomeView.swift in Sources */,
 				6088687C1CE5D45600B2F55C /* AppDelegate.swift in Sources */,
-				60EC72551CEAB75300134EE9 /* ModelAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
