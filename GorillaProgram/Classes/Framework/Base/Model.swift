@@ -8,10 +8,8 @@
 
 import UIKit
 
-class Model: ModelType {
+class Model: NSObject, ModelType {
 
-    func setupData() {
-        
-    }
+    
     
 }

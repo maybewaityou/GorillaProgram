@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import ReactiveCocoa
+import SwiftyJSON
 
 public enum RequestMethod: String {
     case OPTIONS, GET, HEAD, POST, PUT, PATCH, DELETE, TRACE, CONNECT
@@ -23,16 +24,13 @@ class NetworkApi: NSObject {
     }
     
     /** 公共请求方法 */
-    class func signalWithRequest(method: RequestMethod, url: String, params: Dictionary<String, String>) -> RACSignal {
+    class func signalWithRequest<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal {
         print("== url ===>>> \(url)")
         print("== params ===>>> \(params)")
         return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
             sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
-                let result = response.result.value!
-                print("== result ===>>> \(result)")
-                ModelAdapter.model()
                 
-                subscriber.sendNext(result)
+                subscriber.sendNext(ModelAdapter.model(response, model: model))
                 subscriber.sendCompleted()
                 
             })
