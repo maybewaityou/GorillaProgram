@@ -8,7 +8,6 @@
 
 import UIKit
 import ReactiveCocoa
-import Alamofire
 
 class HomeViewModel: ViewModel<HomeDataModel> {
 
@@ -33,7 +32,8 @@ class HomeViewModel: ViewModel<HomeDataModel> {
         return service.getNetworkService()
             .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: User())
             .doNextAs({ (model: User) in
-                print("=====>>> \(model.dog)")
+
+                print("=====>>> \(model)")
             })
     }
     

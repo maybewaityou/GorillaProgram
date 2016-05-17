@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import ReactiveCocoa
-import SwiftyJSON
 
 public enum RequestMethod: String {
     case OPTIONS, GET, HEAD, POST, PUT, PATCH, DELETE, TRACE, CONNECT

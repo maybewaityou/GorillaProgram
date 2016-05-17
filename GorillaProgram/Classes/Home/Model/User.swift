@@ -21,8 +21,15 @@ class User: Model {
 
     var books: [Book]?
     
-
+    class func modelContainerPropertyGenericClass() -> [String: AnyObject] {
+        return [
+            "books": [Book.classForCoder()],
+            "dog": Dog.classForCoder()
+        ]
+    }
+    
 }
+
 class Dog: NSObject {
 
     var dogName: String?
