@@ -10,7 +10,6 @@ import UIKit
 
 class Github: Model {
 
-    
     var current_user_repositories_url: String?
 
     var keys_url: String?
