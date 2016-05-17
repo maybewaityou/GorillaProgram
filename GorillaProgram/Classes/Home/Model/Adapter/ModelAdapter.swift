@@ -22,7 +22,7 @@ class ModelAdapter {
     
     /** 字典转模型
      let github = ModelAdapter.model(json, model: Github()) */
-    class func model<M: Model>(json: JSON, model: M) -> M {
+    private class func model<M: Model>(json: JSON, model: M) -> M {
         setupData(json.dictionaryValue, model: model)
         return model
     }
