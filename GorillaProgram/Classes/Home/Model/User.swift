@@ -20,7 +20,7 @@ class User: Model {
     var name: String?
 
     var books: [Book]?
-    
+
     class func modelContainerPropertyGenericClass() -> [String: AnyObject] {
         return [
             "books": [Book.classForCoder()],
