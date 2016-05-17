@@ -31,8 +31,8 @@ class HomeViewModel: ViewModel<HomeDataModel> {
         let dataModel = HomeDataModel.init(type: .Home)
         service.pushWithDataModel(dataModel)
         return service.getNetworkService()
-            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""])
-            .doNext({ (result) in
+            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: Github())
+            .doNextAs({ (result: Github) in
                 
             })
     }

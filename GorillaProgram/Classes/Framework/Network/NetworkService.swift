@@ -11,6 +11,6 @@ import ReactiveCocoa
 
 protocol NetworkService {
     
-    func signalWithRequestMethid(method: RequestMethod, url: String, params: Dictionary<String, String>) -> RACSignal
+    func signalWithRequestMethid<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal
     
 }
