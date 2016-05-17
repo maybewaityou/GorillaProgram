@@ -19,6 +19,7 @@ PODS:
   - Result (2.0.0)
   - SnapKit (0.21.0)
   - SwiftyJSON (2.3.2)
+  - YYModel (1.0.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - ReactiveCocoa
   - SnapKit
   - SwiftyJSON
+  - YYModel
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
@@ -42,7 +44,8 @@ SPEC CHECKSUMS:
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
 
-PODFILE CHECKSUM: c4df0b43d3f8f2fb4ebdbb99b2d5f5c771f33653
+PODFILE CHECKSUM: 40a4934a8796c840e006ac1332c8f1e6f0c65acf
 
 COCOAPODS: 1.0.0
