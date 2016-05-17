@@ -5,6 +5,7 @@ use_frameworks!
 
 target "GorillaProgram" do
 
+# Swift
 pod 'ReactiveCocoa'
 pod 'SnapKit'
 pod 'Alamofire'
@@ -18,5 +19,8 @@ pod 'SwiftyJSON'
 pod 'MJRefresh'
 #pod 'PopMenu'
 pod 'Aspects'
+
+# OC
+pod 'YYModel'
 
 end
