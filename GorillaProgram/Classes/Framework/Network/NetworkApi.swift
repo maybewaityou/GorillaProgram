@@ -15,7 +15,32 @@ public enum RequestMethod: String {
 }
 
 class NetworkApi: NSObject {
+
+    /** 配置证书 */
+    class func configureCertificate() {
+        allowAllCertificate()
+    }
     
+    /** 公共请求方法 */
+    class func signalWithRequest(method: RequestMethod, url: String, params: Dictionary<String, String>) -> RACSignal {
+        print("== url ===>>> \(url)")
+        print("== params ===>>> \(params)")
+        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+            sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
+                let result = response.result.value!
+                
+                print("== result ===>>> \(result)")
+                
+                subscriber.sendNext(result)
+                subscriber.sendCompleted()
+                
+            })
+            return RACDisposable.init(block: { () -> Void in
+            })
+        })
+    }
+  
+/*============================================================================*/
     // Get请求
     private class func getJsonWithRequest(url: String, completionHandler: Response<AnyObject, NSError> -> Void) {
         Alamofire.request(.GET, url).responseJSON(completionHandler: completionHandler);
@@ -38,24 +63,32 @@ class NetworkApi: NSObject {
             postJsonWithRequest(url, params: params, completionHandler: completionHandler)
         }
     }
-
-    class func signalWithRequest(method: RequestMethod, url: String, params: Dictionary<String, String>) -> RACSignal {
-        print("== url ===>>> \(url)")
-        print("== params ===>>> \(params)")
-        return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
-            sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
-                let result = response.result.value!
-
-                print("== result ===>>> \(result)")
-
-                subscriber.sendNext(result)
-                subscriber.sendCompleted()
-
-            })
-            return RACDisposable.init(block: { () -> Void in
-            })
-        })
-        
+/*============================================================================*/
+/*============================================================================*/
+    /** 允许所有证书 */
+    class func allowAllCertificate() {
+        let manager = Manager.sharedInstance
+        manager.delegate.sessionDidReceiveChallenge = { session, challenge in
+            var disposition: NSURLSessionAuthChallengeDisposition = .PerformDefaultHandling
+            var credential: NSURLCredential?
+            
+            if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+                disposition = NSURLSessionAuthChallengeDisposition.UseCredential
+                credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!)
+            } else {
+                if challenge.previousFailureCount > 0 {
+                    disposition = .CancelAuthenticationChallenge
+                } else {
+                    credential = manager.session.configuration.URLCredentialStorage?.defaultCredentialForProtectionSpace(challenge.protectionSpace)
+                    
+                    if credential != nil {
+                        disposition = .UseCredential
+                    }
+                }
+            }
+            return (disposition, credential)
+        }
     }
+/*============================================================================*/
     
 }

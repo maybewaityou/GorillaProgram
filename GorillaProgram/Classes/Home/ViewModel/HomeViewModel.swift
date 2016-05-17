@@ -8,6 +8,7 @@
 
 import UIKit
 import ReactiveCocoa
+import Alamofire
 
 class HomeViewModel: ViewModel<HomeDataModel> {
 
