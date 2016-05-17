@@ -30,9 +30,8 @@ class HomeViewModel: ViewModel<HomeDataModel> {
     private func buttonCommandExecute() -> RACSignal {
         let dataModel = HomeDataModel.init(type: .Home)
         service.pushWithDataModel(dataModel)
-        let git = Github()
         return service.getNetworkService()
-            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: git)
+            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: Github())
             .doNextAs({ (model: Github) in
                 
             })
