@@ -31,11 +31,12 @@ extension NSObject {
      - parameter dic: 字典
      - returns: 模型
      */
-    class func mp_dicToModel(dic: [String: AnyObject]) -> NSObject? {
+    class func mp_dicToModel<M: Model>(dic: [String: AnyObject], model: M) -> NSObject? {
         if dic.first == nil {
             return nil
         }
-        let t = (self.classForCoder() as! NSObject.Type).init()
+//        let t = (self.classForCoder() as! NSObject.Type).init()
+        let t = model
         let properties = t.mp_modelPropertyClass()
         for (k, v) in dic {
             if t.mp_getVariableWithClass(self.classForCoder(), varName: k) { //如果存在这个属性

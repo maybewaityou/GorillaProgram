@@ -15,4 +15,8 @@ class NetworkServiceImpl: NetworkService {
         return NetworkApi.signalWithRequest(method, url: url, params: params, model: model)
     }
     
+    func producer<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> SignalProducer<M, NSError> {
+        return NetworkApi.producer(method, url: url, params: params, model: model)
+    }
+    
 }

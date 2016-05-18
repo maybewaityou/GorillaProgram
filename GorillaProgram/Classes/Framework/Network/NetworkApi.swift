@@ -24,6 +24,26 @@ class NetworkApi: NSObject {
     }
     
     /** 公共请求方法 */
+    class func producer<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> SignalProducer<M, NSError> {
+        print("== url ===>>> \(url)")
+        print("== params ===>>> \(params)")
+        return SignalProducer<M, NSError> { (observer, disposable) -> () in
+            Async.background(block: {
+                sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
+                    let result = response.result.value!
+                    
+                    print("=====>>> \(result)")
+                    
+                    observer.sendNext(ModelAdapter.model(result, model: model))
+                    observer.sendCompleted()
+                })
+            })
+        }
+        .startOn(QueueScheduler.init())
+        .observeOn(UIScheduler.init())
+    }
+    
+    /** 公共请求方法 */
     class func signalWithRequest<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal {
         print("== url ===>>> \(url)")
         print("== params ===>>> \(params)")
