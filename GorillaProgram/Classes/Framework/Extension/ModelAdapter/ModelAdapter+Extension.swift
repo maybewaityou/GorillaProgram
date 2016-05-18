@@ -11,7 +11,7 @@ import Foundation
 /**
  数据类型
  */
-enum MPModelType: Int{
+enum MPModelType: Int {
     case Number
     case String
     case Bool
@@ -23,7 +23,7 @@ enum MPModelType: Int{
 
 private let mp_queue = dispatch_queue_create("mp_model_queie_serial", DISPATCH_QUEUE_SERIAL)
 
-extension NSObject{
+extension NSObject {
     
     /**
      字典转模型
