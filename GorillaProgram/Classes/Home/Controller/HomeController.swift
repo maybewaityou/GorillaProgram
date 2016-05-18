@@ -16,9 +16,5 @@ class HomeController: ViewController<HomeViewModel, HomeDataModel> {
         viewModel = HomeViewModel.init(service: service)
         customView = HomeView.init()
     }
-    
-    deinit {
-        print("== deinit ===>>> \(self)")
-    }
 
 }

@@ -55,4 +55,8 @@ class ViewController<VM: ViewModelType, DM: DataModelType>: UIViewController {
         view.addSubview(customView)
     }
     
+    deinit {
+        print("== deinit ===>>> \(self)")
+    }
+    
 }

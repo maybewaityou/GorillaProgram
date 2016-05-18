@@ -18,8 +18,7 @@ class ModelAdapter {
         let data = string.dataUsingEncoding(NSUTF8StringEncoding)
         do {
             let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-            let m = M.mp_dicToModel(dict as! [String : AnyObject]) as! M
-            return m
+            return M.mp_dicToModel(dict as! [String : AnyObject]) as! M
         } catch {
             return model
         }

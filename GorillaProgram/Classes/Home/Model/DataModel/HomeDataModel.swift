@@ -13,9 +13,5 @@ class HomeDataModel: DataModel {
     func test() {
         print("=====>>> HomeDataModel")
     }
-
-    deinit {
-        print("== deinit ===>>> \(self)")
-    }
     
 }

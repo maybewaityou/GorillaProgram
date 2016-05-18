@@ -28,9 +28,6 @@ class User: Model {
             "dog": Dog.self
         ]
     }
-
-    
-
     
 }
 

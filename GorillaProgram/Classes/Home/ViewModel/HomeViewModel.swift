@@ -37,8 +37,4 @@ class HomeViewModel: ViewModel<HomeDataModel> {
             })
     }
     
-    deinit {
-        print("== deinit ===>>> \(self)")
-    }
-    
 }

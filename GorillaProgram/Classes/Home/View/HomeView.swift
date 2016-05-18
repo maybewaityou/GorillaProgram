@@ -33,9 +33,5 @@ class HomeView: View<HomeViewModel> {
     override func setupViews() {
         button.frame = CGRectMake(80, 80, 200, 44)
     }
-    
-    deinit {
-        print("== deinit ===>>> \(self)")
-    }
 
 }

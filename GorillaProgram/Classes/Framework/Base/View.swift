@@ -26,4 +26,8 @@ class View<VM: ViewModelType>: UIView {
     func setupViews() {}
     func bindWithViewModel(viewModel: VM) {}
     
+    deinit {
+        print("== deinit ===>>> \(self)")
+    }
+    
 }

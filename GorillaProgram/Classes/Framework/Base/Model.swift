@@ -10,6 +10,8 @@ import UIKit
 
 class Model: NSObject, ModelType {
 
-    
+    deinit {
+        print("== deinit ===>>> \(self)")
+    }
     
 }

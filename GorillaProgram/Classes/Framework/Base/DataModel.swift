@@ -22,4 +22,8 @@ class DataModel: DataModelType {
         self.type = type
     }
     
+    deinit {
+        print("== deinit ===>>> \(self)")
+    }
+    
 }

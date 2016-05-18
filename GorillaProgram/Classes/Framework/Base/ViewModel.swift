@@ -32,4 +32,8 @@ class ViewModel<DM: DataModelType>: ViewModelType {
     
     func initDatas() {}
 
+    deinit {
+        print("== deinit ===>>> \(self)")
+    }
+    
 }
