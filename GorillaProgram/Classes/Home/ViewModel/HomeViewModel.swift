@@ -33,7 +33,7 @@ class HomeViewModel: ViewModel<HomeDataModel> {
             .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: User())
             .doNextAs({ (model: User) in
 
-                print("=====>>> \(model)")
+                print("=====>>> \(model.books)")
             })
     }
     

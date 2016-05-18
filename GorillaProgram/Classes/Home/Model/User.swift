@@ -20,13 +20,17 @@ class User: Model {
     var name: String?
 
     var books: [Book]?
-
-    class func modelContainerPropertyGenericClass() -> [String: AnyObject] {
+    
+    /** 根据Key获取实体相关信息 */
+    override func zz_modelPropertyClass() -> [String: AnyClass]? {
         return [
-            "books": [Book.classForCoder()],
-            "dog": Dog.classForCoder()
+            "books": Book.self,
+            "dog": Dog.self
         ]
     }
+
+    
+
     
 }
 
