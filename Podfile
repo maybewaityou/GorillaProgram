@@ -19,6 +19,7 @@ pod 'SwiftyJSON'
 pod 'MJRefresh'
 #pod 'PopMenu'
 pod 'Aspects'
+pod 'Permission'
 
 # OC
 pod 'YYModel'

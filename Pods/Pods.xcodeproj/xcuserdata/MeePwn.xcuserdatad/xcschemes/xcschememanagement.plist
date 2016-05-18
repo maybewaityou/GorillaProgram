@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Permission.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GorillaProgram.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +72,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2C56F501EA7E1EDE04D915956EB8B55D</key>
+		<key>078501C442202F47204167D62683E962</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1F467CF8C4AF06A92573334EA06748C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>39759609C3E7FA3B50DB56B507916FBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>55ABC5300F5EF855C57F9B23657FB8F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>661D5E27E2E504CC54F79D2A3F167203</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,27 +107,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CDF25404EB17EF7F6A8E2E2C3DE4EB8</key>
+		<key>861D19EF36AF9761E5806D0E399089F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88DB8956FD4D21C310A826676346C2BC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B9068C9663BA5A2F134D7F1DF9E869B5</key>
+		<key>B4A4B751100AFE313B7A2464D667E530</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C766897D56D8A815526A1B61D99EA0CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE5952B9458DCAAD788E18D9338E3213</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,7 +132,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EDEAED341BBEC9C9B63732A068B5D827</key>
+		<key>EF51E6C5AE2FF0A906D31AA981EDD217</key>
 		<dict>
 			<key>primary</key>
 			<true/>

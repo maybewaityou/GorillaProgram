@@ -5,6 +5,7 @@ PODS:
   - Device (1.0.1)
   - Kingfisher (2.4.1)
   - MJRefresh (3.1.0)
+  - Permission (1.4.1)
   - ReactiveCocoa (4.1.0):
     - ReactiveCocoa/UI (= 4.1.0)
     - Result (~> 2.0)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - Device
   - Kingfisher
   - MJRefresh
+  - Permission
   - ReactiveCocoa
   - SnapKit
   - SwiftyJSON
@@ -40,12 +42,13 @@ SPEC CHECKSUMS:
   Device: 7ed5b87db148886e8c3cbcdde5dc997baddbe10b
   Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  Permission: 236c6b62fb6a1524fbb323d00facbfacc0c96544
   ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
 
-PODFILE CHECKSUM: 40a4934a8796c840e006ac1332c8f1e6f0c65acf
+PODFILE CHECKSUM: 014132e6c67dd899efd80aae74b61b6f5e51332e
 
 COCOAPODS: 1.0.0
