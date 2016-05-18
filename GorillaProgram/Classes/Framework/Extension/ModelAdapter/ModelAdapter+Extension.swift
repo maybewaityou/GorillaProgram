@@ -36,21 +36,21 @@ extension NSObject{
             return nil
         }
         let t = (self.classForCoder() as! NSObject.Type).init()
-        let properties = t.zz_modelPropertyClass()
+        let properties = t.mp_modelPropertyClass()
         for (k,v) in dic{
-            if t.zz_getVariableWithClass(self.classForCoder(), varName: k){ //如果存在这个属性
-                if t.zz_isBasic(t.zz_getType(v)){
+            if t.mp_getVariableWithClass(self.classForCoder(), varName: k){ //如果存在这个属性
+                if t.mp_isBasic(t.mp_getType(v)){
                     //                    print(t.classForCoder)
                     //基础类型 可以直接赋值
-                    //                    print("\(k)--\(v)--\(t.zz_getType(v))")
+                    //                    print("\(k)--\(v)--\(t.mp_getType(v))")
                     t.setValue(v,forKey: k)
                 }else{
                     //复杂类型
-                    let type = t.zz_getType(v)
+                    let type = t.mp_getType(v)
                     if type == .Dictionary{
                         //是一个对象类型
                         if let dic1 = v as? [String : AnyObject]{
-                            if t.respondsToSelector(#selector(NSObject.zz_modelPropertyClass)){
+                            if t.respondsToSelector(#selector(NSObject.mp_modelPropertyClass)){
                                 if let properties = properties{
                                     if  t.valueForKey(k) == nil{
                                         //初始化
@@ -67,11 +67,11 @@ extension NSObject{
                         //数组类型
                         if let arr = v as? [AnyObject]{
                             if !arr.isEmpty {
-                                if t.zz_isBasic(t.zz_getType(arr.first!)) {
+                                if t.mp_isBasic(t.mp_getType(arr.first!)) {
                                     //数组中的内容是基本类型
                                     t.setValue(arr, forKey: k)
                                 }else{
-                                    if t.zz_getType(arr.first!) == .Dictionary{
+                                    if t.mp_getType(arr.first!) == .Dictionary{
                                         //对象数组
                                         var objs:[NSObject] = []
                                         for dic in arr{
@@ -106,21 +106,21 @@ extension NSObject{
     func setDicValue(dic1:[String : AnyObject]){
         for (k,v) in dic1{
             
-            if self.zz_getVariableWithClass(self.classForCoder, varName: k){
+            if self.mp_getVariableWithClass(self.classForCoder, varName: k){
                 //判断是否存在这个属性
-                if self.zz_isBasic(self.zz_getType(v)){
+                if self.mp_isBasic(self.mp_getType(v)){
                     //设置基本类型
-                    if self.zz_getType(v) == .Bool{
+                    if self.mp_getType(v) == .Bool{
                         //TODO: -Bool类型怎么处理  不懂
                         //                      self.setValue(Bool(v as! NSNumber), forKey: k)
                         
                     }else{
                         self.setValue(v, forKey: k)
                     }
-                }else if self.zz_getType(v) == .Dictionary{
+                }else if self.mp_getType(v) == .Dictionary{
                     if let dic1 = v as? [String : AnyObject]{
-                        if self.respondsToSelector(#selector(NSObject.zz_modelPropertyClass)){
-                            if let properties = self.zz_modelPropertyClass(){
+                        if self.respondsToSelector(#selector(NSObject.mp_modelPropertyClass)){
+                            if let properties = self.mp_modelPropertyClass(){
                                 if  self.valueForKey(k) == nil{
                                     //初始化
                                     let obj = (properties[k] as! NSObject.Type).init()
@@ -146,7 +146,7 @@ extension NSObject{
      
      - returns: 类型
      */
-    private func zz_getType(v:AnyObject)->MPModelType{
+    private func mp_getType(v:AnyObject)->MPModelType{
         switch v{
         case let number as NSNumber:
             if number.zz_isBool {
@@ -175,7 +175,7 @@ extension NSObject{
      
      - returns: true/false
      */
-    private func zz_isBasic(type:MPModelType)->Bool{
+    private func mp_isBasic(type:MPModelType)->Bool{
         if type == .Bool || type == .String || type == .Number {
             return true
         }
@@ -187,7 +187,7 @@ extension NSObject{
      
      - returns: k , 实体
      */
-    func zz_modelPropertyClass()->[String:AnyClass]?{
+    func mp_modelPropertyClass()->[String:AnyClass]?{
         return nil
     }
     
@@ -199,7 +199,7 @@ extension NSObject{
      
      - returns: bool
      */
-    func zz_getVariableWithClass(cla:AnyClass , varName:String)->Bool{
+    func mp_getVariableWithClass(cla:AnyClass , varName:String)->Bool{
         var outCount:UInt32 = 0
         let ivars = class_copyIvarList(cla, &outCount)
         for i in 0..<outCount{

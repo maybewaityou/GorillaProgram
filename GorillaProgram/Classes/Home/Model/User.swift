@@ -22,7 +22,7 @@ class User: Model {
     var books: [Book]?
     
     /** 根据Key获取实体相关信息 */
-    override func zz_modelPropertyClass() -> [String: AnyClass]? {
+    override func mp_modelPropertyClass() -> [String: AnyClass]? {
         return [
             "books": Book.self,
             "dog": Dog.self
