@@ -31,56 +31,54 @@ extension NSObject{
      - parameter dic: 字典
      - returns: 模型
      */
-    class func mp_dicToModel(dic:[String:AnyObject])->NSObject?{
+    class func mp_dicToModel(dic: [String: AnyObject]) -> NSObject? {
         if dic.first == nil {
             return nil
         }
         let t = (self.classForCoder() as! NSObject.Type).init()
         let properties = t.mp_modelPropertyClass()
-        for (k,v) in dic{
-            if t.mp_getVariableWithClass(self.classForCoder(), varName: k){ //如果存在这个属性
-                if t.mp_isBasic(t.mp_getType(v)){
-                    //                    print(t.classForCoder)
+        for (k, v) in dic {
+            if t.mp_getVariableWithClass(self.classForCoder(), varName: k) { //如果存在这个属性
+                if t.mp_isBasic(t.mp_getType(v)) {
                     //基础类型 可以直接赋值
-                    //                    print("\(k)--\(v)--\(t.mp_getType(v))")
-                    t.setValue(v,forKey: k)
-                }else{
+                    t.setValue(v, forKey: k)
+                } else {
                     //复杂类型
                     let type = t.mp_getType(v)
-                    if type == .Dictionary{
+                    if type == .Dictionary {
                         //是一个对象类型
-                        if let dic1 = v as? [String : AnyObject]{
-                            if t.respondsToSelector(#selector(NSObject.mp_modelPropertyClass)){
-                                if let properties = properties{
-                                    if  t.valueForKey(k) == nil{
+                        if let dic1 = v as? [String: AnyObject] {
+                            if t.respondsToSelector(#selector(NSObject.mp_modelPropertyClass)) {
+                                if let properties = properties {
+                                    if  t.valueForKey(k) == nil {
                                         //初始化
                                         let obj = (properties[k] as! NSObject.Type).init()
                                         t.setValue(obj, forKey: k)
                                     }
                                 }
                             }
-                            if let obj = t.valueForKey(k){
+                            if let obj = t.valueForKey(k) {
                                 obj.setDicValue(dic1) //有对象就递归
                             }
                         }
-                    }else if type == .Array{
+                    }else if type == .Array {
                         //数组类型
-                        if let arr = v as? [AnyObject]{
+                        if let arr = v as? [AnyObject] {
                             if !arr.isEmpty {
                                 if t.mp_isBasic(t.mp_getType(arr.first!)) {
                                     //数组中的内容是基本类型
                                     t.setValue(arr, forKey: k)
-                                }else{
-                                    if t.mp_getType(arr.first!) == .Dictionary{
+                                } else {
+                                    if t.mp_getType(arr.first!) == .Dictionary {
                                         //对象数组
-                                        var objs:[NSObject] = []
-                                        for dic in arr{
-                                            if let properties = properties{
+                                        var objs: [NSObject] = []
+                                        for dic in arr {
+                                            if let properties = properties {
                                                 let obj = (properties[k] as! NSObject.Type).init()
                                                 objs.append(obj)
                                                 dispatch_async(mp_queue) {
                                                     //串行对列执行
-                                                    obj.setDicValue(dic as! [String : AnyObject])
+                                                    obj.setDicValue(dic as! [String: AnyObject])
                                                 }
                                             }
                                         }
@@ -91,7 +89,6 @@ extension NSObject{
                         }
                     }
                 }
-                
             }
         }
         return t
@@ -103,37 +100,36 @@ extension NSObject{
      
      - parameter dic1: 字典
      */
-    func setDicValue(dic1:[String : AnyObject]){
-        for (k,v) in dic1{
+    func setDicValue(dic1: [String: AnyObject]) {
+        for (k, v) in dic1 {
             
-            if self.mp_getVariableWithClass(self.classForCoder, varName: k){
+            if self.mp_getVariableWithClass(self.classForCoder, varName: k) {
                 //判断是否存在这个属性
-                if self.mp_isBasic(self.mp_getType(v)){
+                if self.mp_isBasic(self.mp_getType(v)) {
                     //设置基本类型
-                    if self.mp_getType(v) == .Bool{
+                    if self.mp_getType(v) == .Bool {
                         //TODO: -Bool类型怎么处理  不懂
                         //                      self.setValue(Bool(v as! NSNumber), forKey: k)
                         
-                    }else{
+                    } else {
                         self.setValue(v, forKey: k)
                     }
-                }else if self.mp_getType(v) == .Dictionary{
-                    if let dic1 = v as? [String : AnyObject]{
-                        if self.respondsToSelector(#selector(NSObject.mp_modelPropertyClass)){
-                            if let properties = self.mp_modelPropertyClass(){
-                                if  self.valueForKey(k) == nil{
+                } else if self.mp_getType(v) == .Dictionary {
+                    if let dic1 = v as? [String: AnyObject] {
+                        if self.respondsToSelector(#selector(NSObject.mp_modelPropertyClass)) {
+                            if let properties = self.mp_modelPropertyClass() {
+                                if  self.valueForKey(k) == nil {
                                     //初始化
                                     let obj = (properties[k] as! NSObject.Type).init()
                                     self.setValue(obj, forKey: k)
                                 }
                             }
                         }
-                        if let obj = self.valueForKey(k){
+                        if let obj = self.valueForKey(k) {
                             obj.setDicValue(dic1) //递归
                         }
                     }
                 }
-                
             }
         }
     }
@@ -146,8 +142,8 @@ extension NSObject{
      
      - returns: 类型
      */
-    private func mp_getType(v:AnyObject)->MPModelType{
-        switch v{
+    private func mp_getType(v: AnyObject) -> MPModelType {
+        switch v {
         case let number as NSNumber:
             if number.mp_isBool {
                 return .Bool
@@ -160,7 +156,7 @@ extension NSObject{
             return .Null
         case _ as [AnyObject]:
             return .Array
-        case _ as [String : AnyObject]:
+        case _ as [String: AnyObject]:
             return .Dictionary
         default:
             return .Unknown
@@ -175,7 +171,7 @@ extension NSObject{
      
      - returns: true/false
      */
-    private func mp_isBasic(type:MPModelType)->Bool{
+    private func mp_isBasic(type: MPModelType) -> Bool {
         if type == .Bool || type == .String || type == .Number {
             return true
         }
@@ -187,7 +183,7 @@ extension NSObject{
      
      - returns: k , 实体
      */
-    func mp_modelPropertyClass()->[String:AnyClass]?{
+    func mp_modelPropertyClass() -> [String: AnyClass]? {
         return nil
     }
     
@@ -199,13 +195,13 @@ extension NSObject{
      
      - returns: bool
      */
-    func mp_getVariableWithClass(cla:AnyClass , varName:String)->Bool{
+    func mp_getVariableWithClass(cls: AnyClass , varName: String) -> Bool{
         var outCount:UInt32 = 0
-        let ivars = class_copyIvarList(cla, &outCount)
-        for i in 0..<outCount{
+        let ivars = class_copyIvarList(cls, &outCount)
+        for i in 0..<outCount {
             let property = ivars[Int(i)]
             let keyName = String.fromCString(ivar_getName(property))
-            if keyName == varName{
+            if keyName == varName {
                 free(ivars)
                 return true
             }
@@ -222,7 +218,7 @@ private let mp_trueObjCType = String.fromCString(mp_trueNumber.objCType)
 private let mp_falseObjCType = String.fromCString(mp_falseNumber.objCType)
 // MARK: - 判断是否为bool
 extension NSNumber {
-    var mp_isBool:Bool {
+    var mp_isBool: Bool {
         get {
             let objCType = String.fromCString(self.objCType)
             if (self.compare(mp_trueNumber) == NSComparisonResult.OrderedSame && objCType == mp_trueObjCType)
