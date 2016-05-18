@@ -190,7 +190,7 @@ extension NSObject {
     /**
      判断对象中是否包含某个属性
      
-     - parameter cla:     类
+     - parameter cls:     类
      - parameter varName: 变量名
      
      - returns: bool
