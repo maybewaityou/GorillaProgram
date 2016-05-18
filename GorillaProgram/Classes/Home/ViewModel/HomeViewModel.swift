@@ -27,19 +27,19 @@ class HomeViewModel: ViewModel<HomeDataModel> {
     }
     
     private func buttonCommandExecute() -> RACSignal {
-        service.getNetworkService()
-            .producer(.GET, url: "https://api.github.com", params: ["": ""], model: User())
-            .startWithNext { (user) in
-                print("=====>>> \(user)")
-            }
-        return RACSignal.empty()
-//        let dataModel = HomeDataModel.init(type: .Home)
-//        service.pushWithDataModel(dataModel)
-//        return service.getNetworkService()
-//            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: User())
-//            .doNextAs({ (model: User) in
-//                print("=====>>> \(model.books)")
-//            })
+//        service.getNetworkService()
+//            .producer(.GET, url: "https://api.github.com", params: ["": ""], model: User())
+//            .startWithNext { (user) in
+//                print("=====>>> \(user)")
+//            }
+//        return RACSignal.empty()
+        let dataModel = HomeDataModel.init(type: .Home)
+        service.pushWithDataModel(dataModel)
+        return service.getNetworkService()
+            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: User())
+            .doNextAs({ (model: User) in
+                print("=====>>> \(model.books)")
+            })
     }
     
 }
