@@ -11,7 +11,7 @@ import Foundation
 /**
  数据类型
  */
-public enum MPModelType :Int{
+enum MPModelType :Int{
     case Number
     case String
     case Bool
@@ -21,7 +21,8 @@ public enum MPModelType :Int{
     case Unknown
 }
 
-private let zz_queue = dispatch_queue_create("zz_zzjmodel_queie_serial", DISPATCH_QUEUE_SERIAL)
+private let mp_queue = dispatch_queue_create("mp_model_queie_serial", DISPATCH_QUEUE_SERIAL)
+
 extension NSObject{
     
     /**
@@ -30,7 +31,7 @@ extension NSObject{
      - parameter dic: 字典
      - returns: 模型
      */
-    static func zz_dicToModel(dic:[String:AnyObject])->NSObject?{
+    static func mp_dicToModel(dic:[String:AnyObject])->NSObject?{
         if dic.first == nil {
             return nil
         }
@@ -77,7 +78,7 @@ extension NSObject{
                                             if let properties = properties{
                                                 let obj = (properties[k] as! NSObject.Type).init()
                                                 objs.append(obj)
-                                                dispatch_async(zz_queue) {
+                                                dispatch_async(mp_queue) {
                                                     //串行对列执行
                                                     obj.setDicValue(dic as! [String : AnyObject])
                                                 }
