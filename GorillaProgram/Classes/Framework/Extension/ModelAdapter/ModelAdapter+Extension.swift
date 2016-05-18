@@ -216,6 +216,7 @@ private let mp_trueNumber = NSNumber(bool: true)
 private let mp_falseNumber = NSNumber(bool: false)
 private let mp_trueObjCType = String.fromCString(mp_trueNumber.objCType)
 private let mp_falseObjCType = String.fromCString(mp_falseNumber.objCType)
+
 // MARK: - 判断是否为bool
 extension NSNumber {
     var mp_isBool: Bool {
