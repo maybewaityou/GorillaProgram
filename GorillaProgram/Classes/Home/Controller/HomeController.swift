@@ -9,11 +9,6 @@
 import UIKit
 
 class HomeController: ViewController<HomeViewModel, HomeDataModel> {
-
-    // MARK: Initialize
-    override init() {
-        super.init()
-    }
     
     // MARK: Private Method
     override func initDatas() {
