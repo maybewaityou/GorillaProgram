@@ -20,11 +20,6 @@ class HomeView: View<HomeViewModel> {
         return button
     }()
     
-    // MARK: Initialize
-    override init() {
-        super.init()
-    }
-    
     // MARK: Private Method
     override func bindWithViewModel(viewModel: HomeViewModel) {
         self.viewModel = viewModel
