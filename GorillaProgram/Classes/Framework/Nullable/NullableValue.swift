@@ -10,17 +10,17 @@ import UIKit
 
 class NullableValue: ModelType, ViewModelType, ServiceType, DataModelType {
     
-    func getNetworkService() -> NetworkService {
+    func network() -> NetworkService {
         return NetworkServiceImpl.init()
     }
     
     func setupData() {}
     
-    func pushWithDataModel<DM : DataModelType>(dataModel: DM) {}
+    func push<DM : DataModelType>(dataModel: DM) {}
     
-    func popViewController() {}
+    func pop() {}
     
-    func popToRootViewController() {}
+    func popToRoot() {}
     
     func controller() -> UIViewController {
         return UIViewController.init()

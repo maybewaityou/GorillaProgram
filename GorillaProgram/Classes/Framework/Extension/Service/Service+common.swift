@@ -11,15 +11,15 @@ import UIKit
 extension Service {
     
     // MARK: Common Method
-    func getNetworkService() -> NetworkService {
+    func network() -> NetworkService {
         return service
     }
     
-    func popViewController() {
+    func pop() {
         navController.popViewControllerAnimated(true)
     }
     
-    func popToRootViewController() {
+    func popToRoot() {
         navController.popToRootViewControllerAnimated(true)
     }
     

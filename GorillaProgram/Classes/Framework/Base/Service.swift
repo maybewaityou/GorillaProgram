@@ -21,7 +21,7 @@ class Service: ServiceType {
         self.navController = navController
     }
 
-    func pushWithDataModel<DM : DataModel>(dataModel: DM) {
+    func push<DM : DataModel>(dataModel: DM) {
         switch(dataModel.type) {
         case .Home:
             let controller = HomeController.init()
