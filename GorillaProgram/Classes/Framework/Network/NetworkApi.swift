@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import ReactiveCocoa
+import Async
 
 public enum RequestMethod: String {
     case OPTIONS, GET, HEAD, POST, PUT, PATCH, DELETE, TRACE, CONNECT
@@ -27,17 +28,21 @@ class NetworkApi: NSObject {
         print("== url ===>>> \(url)")
         print("== params ===>>> \(params)")
         return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
-            sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
-                let result = response.result.value!
-                
-                print("=====>>> \(result)")
-                
-                subscriber.sendNext(ModelAdapter.model(result, model: model))
-                subscriber.sendCompleted()
+            Async.background(block: {
+                sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
+                    let result = response.result.value!
+                    
+                    print("=====>>> \(result)")
+                    
+                    subscriber.sendNext(ModelAdapter.model(result, model: model))
+                    subscriber.sendCompleted()
+                })
             })
             return RACDisposable.init(block: { () -> Void in
             })
         })
+        .subscribeOn(RACScheduler.immediateScheduler())
+        .deliverOn(RACScheduler.mainThreadScheduler())
     }
 /*====================================== Common Method End ======================================*/
 
