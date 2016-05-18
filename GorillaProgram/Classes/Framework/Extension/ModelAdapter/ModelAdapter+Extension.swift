@@ -11,7 +11,7 @@ import Foundation
 /**
  数据类型
  */
-enum MPModelType :Int{
+enum MPModelType: Int{
     case Number
     case String
     case Bool
@@ -31,7 +31,7 @@ extension NSObject{
      - parameter dic: 字典
      - returns: 模型
      */
-    static func mp_dicToModel(dic:[String:AnyObject])->NSObject?{
+    class func mp_dicToModel(dic:[String:AnyObject])->NSObject?{
         if dic.first == nil {
             return nil
         }
@@ -149,7 +149,7 @@ extension NSObject{
     private func mp_getType(v:AnyObject)->MPModelType{
         switch v{
         case let number as NSNumber:
-            if number.zz_isBool {
+            if number.mp_isBool {
                 return .Bool
             } else {
                 return .Number
@@ -216,17 +216,17 @@ extension NSObject{
     
 }
 
-private let zz_trueNumber = NSNumber(bool: true)
-private let zz_falseNumber = NSNumber(bool: false)
-private let zz_trueObjCType = String.fromCString(zz_trueNumber.objCType)
-private let zz_falseObjCType = String.fromCString(zz_falseNumber.objCType)
+private let mp_trueNumber = NSNumber(bool: true)
+private let mp_falseNumber = NSNumber(bool: false)
+private let mp_trueObjCType = String.fromCString(mp_trueNumber.objCType)
+private let mp_falseObjCType = String.fromCString(mp_falseNumber.objCType)
 // MARK: - 判断是否为bool
 extension NSNumber {
-    var zz_isBool:Bool {
+    var mp_isBool:Bool {
         get {
             let objCType = String.fromCString(self.objCType)
-            if (self.compare(zz_trueNumber) == NSComparisonResult.OrderedSame && objCType == zz_trueObjCType)
-                || (self.compare(zz_falseNumber) == NSComparisonResult.OrderedSame && objCType == zz_falseObjCType){
+            if (self.compare(mp_trueNumber) == NSComparisonResult.OrderedSame && objCType == mp_trueObjCType)
+                || (self.compare(mp_falseNumber) == NSComparisonResult.OrderedSame && objCType == mp_falseObjCType){
                 return true
             } else {
                 return false
