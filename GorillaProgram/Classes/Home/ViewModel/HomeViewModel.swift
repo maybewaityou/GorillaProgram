@@ -36,7 +36,7 @@ class HomeViewModel: ViewModel<HomeDataModel> {
         let dataModel = HomeDataModel.init(type: .Home)
         service.push(dataModel)
         return service.network()
-            .signalWithRequestMethid(.GET, url: "https://api.github.com", params: ["": ""], model: User())
+            .signal(.GET, url: "https://api.github.com", params: ["": ""], model: User())
             .doNextAs({ (model: User) in
                 print("=====>>> \(model.books)")
             })

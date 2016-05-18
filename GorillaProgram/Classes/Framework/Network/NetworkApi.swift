@@ -44,7 +44,7 @@ class NetworkApi: NSObject {
     }
     
     /** 公共请求方法 */
-    class func signalWithRequest<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal {
+    class func signal<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal {
         print("== url ===>>> \(url)")
         print("== params ===>>> \(params)")
         return RACSignal.createSignal({ (subscriber) -> RACDisposable! in

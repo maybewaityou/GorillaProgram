@@ -11,8 +11,8 @@ import ReactiveCocoa
 
 class NetworkServiceImpl: NetworkService {
 
-    func signalWithRequestMethid<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal {
-        return NetworkApi.signalWithRequest(method, url: url, params: params, model: model)
+    func signal<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal {
+        return NetworkApi.signal(method, url: url, params: params, model: model)
     }
     
     func producer<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> SignalProducer<M, NSError> {
