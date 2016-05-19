@@ -18,6 +18,9 @@ PODS:
     - ReactiveCocoa/Core
     - Result (~> 2.0)
   - Result (2.0.0)
+  - RxCocoa (2.5.0):
+    - RxSwift (~> 2.5)
+  - RxSwift (2.5.0)
   - SnapKit (0.21.0)
   - SwiftyJSON (2.3.2)
   - YYModel (1.0.3)
@@ -31,6 +34,8 @@ DEPENDENCIES:
   - MJRefresh
   - Permission
   - ReactiveCocoa
+  - RxCocoa
+  - RxSwift
   - SnapKit
   - SwiftyJSON
   - YYModel
@@ -45,10 +50,12 @@ SPEC CHECKSUMS:
   Permission: 236c6b62fb6a1524fbb323d00facbfacc0c96544
   ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
+  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
 
-PODFILE CHECKSUM: 014132e6c67dd899efd80aae74b61b6f5e51332e
+PODFILE CHECKSUM: be7923fbb7f8b0ca816b028095b01dc3431ddd7a
 
 COCOAPODS: 1.0.0

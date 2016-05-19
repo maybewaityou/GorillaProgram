@@ -6,6 +6,8 @@ use_frameworks!
 target "GorillaProgram" do
 
 # Swift
+pod 'RxSwift'
+pod 'RxCocoa'
 pod 'ReactiveCocoa'
 pod 'SnapKit'
 pod 'Alamofire'
