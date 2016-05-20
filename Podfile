@@ -7,6 +7,7 @@ target "GorillaProgram" do
 
 # Swift
 pod 'RxSwift'
+pod "RxSwiftExt"
 pod 'RxCocoa'
 pod 'ReactiveCocoa'
 pod 'SnapKit'

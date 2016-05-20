@@ -21,6 +21,8 @@ PODS:
   - RxCocoa (2.5.0):
     - RxSwift (~> 2.5)
   - RxSwift (2.5.0)
+  - RxSwiftExt (1.0.1):
+    - RxSwift (~> 2.1)
   - SnapKit (0.21.0)
   - SwiftyJSON (2.3.2)
   - YYModel (1.0.3)
@@ -36,6 +38,7 @@ DEPENDENCIES:
   - ReactiveCocoa
   - RxCocoa
   - RxSwift
+  - RxSwiftExt
   - SnapKit
   - SwiftyJSON
   - YYModel
@@ -52,10 +55,11 @@ SPEC CHECKSUMS:
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
   RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
+  RxSwiftExt: 308a5f411533c7660da8317cb1b44161f9181ba4
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
 
-PODFILE CHECKSUM: be7923fbb7f8b0ca816b028095b01dc3431ddd7a
+PODFILE CHECKSUM: b4881dec949d70dc1469ecac47047457d8322a80
 
 COCOAPODS: 1.0.0
