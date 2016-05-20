@@ -41,6 +41,8 @@ class NetworkApi: NSObject {
             })
             return NopDisposable.instance
         }
+        .subscribeOn(MainScheduler.asyncInstance)
+        .observeOn(MainScheduler.instance)
     }
     
     /** 公共请求方法 - RAC 4+ */

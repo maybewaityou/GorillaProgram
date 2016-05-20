@@ -37,14 +37,14 @@ class HomeViewModel: ViewModel<HomeDataModel> {
 //            .startWithNext { (user) in
 //                print("=====>>> \(user)")
 //            }
-        return RACSignal.empty()
-//        let dataModel = HomeDataModel.init(type: .Home)
-//        service.push(dataModel)
-//        return service.network()
-//            .signal(.GET, url: "https://api.github.com", params: ["": ""], model: User())
-//            .doNextAs({ (model: User) in
-//                print("=====>>> \(model.books)")
-//            })
+//        return RACSignal.empty()
+        let dataModel = HomeDataModel.init(type: .Home)
+        service.push(dataModel)
+        return service.network()
+            .signal(.GET, url: "https://api.github.com", params: ["": ""], model: User())
+            .doNextAs({ (model: User) in
+                print("=====>>> \(model.books)")
+            })
     }
     
 }
