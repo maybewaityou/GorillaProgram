@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewModel<DM: DataModelType>: ViewModelType {
+class ViewModel<DM: DataModelType>: NSObject, ViewModelType {
     
     var dataModel: DM?
     var service: Service!
@@ -16,12 +16,14 @@ class ViewModel<DM: DataModelType>: ViewModelType {
     // MARK: Initialize
     init(service: Service) {
         self.service = service
+        super.init()
         initialize()
     }
     
     init(service: Service, dataModel: DM) {
         self.service = service
         self.dataModel = dataModel
+        super.init()
         initialize()
     }
     

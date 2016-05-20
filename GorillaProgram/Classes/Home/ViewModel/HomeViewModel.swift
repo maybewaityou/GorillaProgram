@@ -27,11 +27,11 @@ class HomeViewModel: ViewModel<HomeDataModel> {
     }
     
     private func buttonCommandExecute() -> RACSignal {
-//        _ = service.network()
+//        service.network()
 //            .observable(.GET, url: "https://api.github.com", params: ["": ""], model: User())
 //            .subscribeNext { (user) in
 //                print("=====>>> \(user.dog?.dogName)")
-//        }
+//        }.addDisposableTo(rx_disposeBag)
 //        service.network()
 //            .producer(.GET, url: "https://api.github.com", params: ["": ""], model: User())
 //            .startWithNext { (user) in

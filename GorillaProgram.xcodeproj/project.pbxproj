@@ -47,6 +47,7 @@
 		603EE3301CE99AD10092ED3F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE32C1CE99AD10092ED3F /* UIView+Extension.swift */; };
 		603EE3311CE99AD10092ED3F /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE32D1CE99AD10092ED3F /* UIWindow+Extension.swift */; };
 		603EE3341CE99AFB0092ED3F /* Service+common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3331CE99AFB0092ED3F /* Service+common.swift */; };
+		6082A0AC1CEED57A00350D1F /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0AB1CEED57A00350D1F /* NSObject+Rx.swift */; };
 		60834B8B1CE41A7500B60AB2 /* GorillaProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B8A1CE41A7500B60AB2 /* GorillaProgramTests.swift */; };
 		60834B961CE41A7500B60AB2 /* GorillaProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */; };
 		608867CB1CE5CA7000B2F55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608867C61CE5CA7000B2F55C /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		603EE32C1CE99AD10092ED3F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		603EE32D1CE99AD10092ED3F /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		603EE3331CE99AFB0092ED3F /* Service+common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service+common.swift"; sourceTree = "<group>"; };
+		6082A0AB1CEED57A00350D1F /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		60834B721CE41A7500B60AB2 /* GorillaProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B811CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60834B861CE41A7500B60AB2 /* GorillaProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				603EE3321CE99AE60092ED3F /* Service */,
+				6082A0AA1CEED57300350D1F /* Rx */,
 				60DB130A1CE9ACFD006C8062 /* RAC */,
 				6001E24E1CEBFAD100CE007D /* ModelAdapter */,
 				603EE32A1CE99AD10092ED3F /* UIBarButtonItem+Extension.swift */,
@@ -284,6 +287,14 @@
 				603EE3331CE99AFB0092ED3F /* Service+common.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		6082A0AA1CEED57300350D1F /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				6082A0AB1CEED57A00350D1F /* NSObject+Rx.swift */,
+			);
+			path = Rx;
 			sourceTree = "<group>";
 		};
 		60834B691CE41A7500B60AB2 = {
@@ -754,6 +765,7 @@
 				6013F1AF1CE965A90053F75F /* Model.swift in Sources */,
 				601918251CEB0153008454DB /* ModelAdapter.swift in Sources */,
 				6013F1B11CE965E00053F75F /* Service.swift in Sources */,
+				6082A0AC1CEED57A00350D1F /* NSObject+Rx.swift in Sources */,
 				603EE3341CE99AFB0092ED3F /* Service+common.swift in Sources */,
 				60DB13161CE9B334006C8062 /* RACSignal+Extensions.swift in Sources */,
 				6013F1BC1CE96ACB0053F75F /* NetworkService.swift in Sources */,
