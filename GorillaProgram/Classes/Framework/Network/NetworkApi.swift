@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import RxSwift
 import ReactiveCocoa
 import Async
 
@@ -23,7 +24,26 @@ class NetworkApi: NSObject {
         allowAllCertificate()
     }
     
-    /** 公共请求方法 */
+    /** 公共请求方法 - RxSwift */
+    class func observable<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> Observable<M> {
+        print("== url ===>>> \(url)")
+        print("== params ===>>> \(params)")
+        return Observable.create { (observer) -> RxSwift.Disposable in
+            Async.background(block: {
+                sendRequest(method, url: url, params: params, completionHandler: { (response) -> Void in
+                    let result = response.result.value!
+                    
+                    print("=====>>> \(result)")
+                    
+                    observer.onNext(ModelAdapter.model(result, model: model))
+                    observer.onCompleted()
+                })
+            })
+            return NopDisposable.instance
+        }
+    }
+    
+    /** 公共请求方法 - RAC 4+ */
     class func producer<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> SignalProducer<M, NSError> {
         print("== url ===>>> \(url)")
         print("== params ===>>> \(params)")
@@ -43,7 +63,7 @@ class NetworkApi: NSObject {
         .observeOn(UIScheduler.init())
     }
     
-    /** 公共请求方法 */
+    /** 公共请求方法 - RAC 3+ */
     class func signal<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal {
         print("== url ===>>> \(url)")
         print("== params ===>>> \(params)")

@@ -8,11 +8,16 @@
 
 import UIKit
 import ReactiveCocoa
+import RxSwift
 
 protocol NetworkService {
     
-    func signal<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal
+    /** RxSwift */
+    func observable<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> Observable<M>
     
-    /* RAC 4+ */
+    /** RAC 4+ */
     func producer<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> SignalProducer<M, NSError>
+    
+    /** RAC 3+ */
+    func signal<M: Model>(method: RequestMethod, url: String, params: Dictionary<String, String>, model: M) -> RACSignal
 }

@@ -27,19 +27,24 @@ class HomeViewModel: ViewModel<HomeDataModel> {
     }
     
     private func buttonCommandExecute() -> RACSignal {
+//        _ = service.network()
+//            .observable(.GET, url: "https://api.github.com", params: ["": ""], model: User())
+//            .subscribeNext { (user) in
+//                print("=====>>> \(user.dog?.dogName)")
+//        }
 //        service.network()
 //            .producer(.GET, url: "https://api.github.com", params: ["": ""], model: User())
 //            .startWithNext { (user) in
 //                print("=====>>> \(user)")
 //            }
-//        return RACSignal.empty()
-        let dataModel = HomeDataModel.init(type: .Home)
-        service.push(dataModel)
-        return service.network()
-            .signal(.GET, url: "https://api.github.com", params: ["": ""], model: User())
-            .doNextAs({ (model: User) in
-                print("=====>>> \(model.books)")
-            })
+        return RACSignal.empty()
+//        let dataModel = HomeDataModel.init(type: .Home)
+//        service.push(dataModel)
+//        return service.network()
+//            .signal(.GET, url: "https://api.github.com", params: ["": ""], model: User())
+//            .doNextAs({ (model: User) in
+//                print("=====>>> \(model.books)")
+//            })
     }
     
 }
