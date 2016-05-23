@@ -28,7 +28,6 @@ class TestViewModel: ViewModel<TestDataModel> {
     
     private func buttonCommandExecute() -> RACSignal {
         service.pop()
-        
         return RACSignal.empty()
     }
     
