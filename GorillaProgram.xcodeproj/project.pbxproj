@@ -127,12 +127,12 @@
 		608867C61CE5CA7000B2F55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		608867C81CE5CA7000B2F55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6088686C1CE5D45600B2F55C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		608F0AB81CF2A04D0074F3F0 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = Framework/DataModel.swift; sourceTree = "<group>"; };
-		608F0AB91CF2A04D0074F3F0 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Framework/Model.swift; sourceTree = "<group>"; };
-		608F0ABA1CF2A04D0074F3F0 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Framework/Service.swift; sourceTree = "<group>"; };
-		608F0ABB1CF2A04D0074F3F0 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = View.swift; path = Framework/View.swift; sourceTree = "<group>"; };
-		608F0ABC1CF2A04D0074F3F0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Framework/ViewController.swift; sourceTree = "<group>"; };
-		608F0ABD1CF2A04D0074F3F0 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = Framework/ViewModel.swift; sourceTree = "<group>"; };
+		608F0AB81CF2A04D0074F3F0 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		608F0AB91CF2A04D0074F3F0 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		608F0ABA1CF2A04D0074F3F0 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		608F0ABB1CF2A04D0074F3F0 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		608F0ABC1CF2A04D0074F3F0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		608F0ABD1CF2A04D0074F3F0 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		608F0AC51CF2A0540074F3F0 /* DataModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelType.swift; sourceTree = "<group>"; };
 		608F0AC61CF2A0540074F3F0 /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		608F0AC71CF2A0540074F3F0 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
@@ -209,6 +209,12 @@
 				6013F1BA1CE96ACB0053F75F /* Network */,
 				6013F18D1CE9630E0053F75F /* Permission */,
 				603EE3291CE99AA10092ED3F /* Extension */,
+				608F0AB81CF2A04D0074F3F0 /* DataModel.swift */,
+				608F0AB91CF2A04D0074F3F0 /* Model.swift */,
+				608F0ABA1CF2A04D0074F3F0 /* Service.swift */,
+				608F0ABB1CF2A04D0074F3F0 /* View.swift */,
+				608F0ABC1CF2A04D0074F3F0 /* ViewController.swift */,
+				608F0ABD1CF2A04D0074F3F0 /* ViewModel.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -343,12 +349,6 @@
 			isa = PBXGroup;
 			children = (
 				6013F18A1CE9630E0053F75F /* Framework */,
-				608F0AB81CF2A04D0074F3F0 /* DataModel.swift */,
-				608F0AB91CF2A04D0074F3F0 /* Model.swift */,
-				608F0ABA1CF2A04D0074F3F0 /* Service.swift */,
-				608F0ABB1CF2A04D0074F3F0 /* View.swift */,
-				608F0ABC1CF2A04D0074F3F0 /* ViewController.swift */,
-				608F0ABD1CF2A04D0074F3F0 /* ViewModel.swift */,
 				608868591CE5D45600B2F55C /* Home */,
 				608868601CE5D45600B2F55C /* Main */,
 				608868751CE5D45600B2F55C /* Test */,
