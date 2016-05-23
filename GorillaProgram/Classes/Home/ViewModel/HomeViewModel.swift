@@ -38,7 +38,8 @@ class HomeViewModel: ViewModel<HomeDataModel> {
 //                print("=====>>> \(user)")
 //            }
 //        return RACSignal.empty()
-        let dataModel = HomeDataModel.init(type: .Home)
+//        let dataModel = HomeDataModel.init(type: .Home)
+        let dataModel = TestDataModel.init(type: .Test)
         service.push(dataModel)
         return service.network()
             .signal(.GET, url: "https://api.github.com", params: ["": ""], model: User())

@@ -53,6 +53,10 @@
 		608F0ACA1CF2A0540074F3F0 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F0AC61CF2A0540074F3F0 /* ModelType.swift */; };
 		608F0ACB1CF2A0540074F3F0 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F0AC71CF2A0540074F3F0 /* ServiceType.swift */; };
 		608F0ACC1CF2A0540074F3F0 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F0AC81CF2A0540074F3F0 /* ViewModelType.swift */; };
+		608F0AD01CF2EC7B0074F3F0 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F0ACF1CF2EC7B0074F3F0 /* TestController.swift */; };
+		608F0AD21CF2EC8F0074F3F0 /* TestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F0AD11CF2EC8F0074F3F0 /* TestDataModel.swift */; };
+		608F0AD41CF2ECB20074F3F0 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F0AD31CF2ECB20074F3F0 /* TestViewModel.swift */; };
+		608F0AD61CF2ECD00074F3F0 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F0AD51CF2ECD00074F3F0 /* TestView.swift */; };
 		60DB13071CE9AC4B006C8062 /* Method+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB13061CE9AC4B006C8062 /* Method+Swizzling.swift */; };
 		60DB130D1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB130B1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift */; };
 		60DB130E1CE9AD1A006C8062 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB130C1CE9AD1A006C8062 /* UIKit+Extensions.swift */; };
@@ -137,6 +141,10 @@
 		608F0AC61CF2A0540074F3F0 /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		608F0AC71CF2A0540074F3F0 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		608F0AC81CF2A0540074F3F0 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		608F0ACF1CF2EC7B0074F3F0 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		608F0AD11CF2EC8F0074F3F0 /* TestDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataModel.swift; sourceTree = "<group>"; };
+		608F0AD31CF2ECB20074F3F0 /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		608F0AD51CF2ECD00074F3F0 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		60DB13061CE9AC4B006C8062 /* Method+Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Method+Swizzling.swift"; sourceTree = "<group>"; };
 		60DB130B1CE9AD1A006C8062 /* ReactiveCocoa+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReactiveCocoa+Extensions.swift"; sourceTree = "<group>"; };
 		60DB130C1CE9AD1A006C8062 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
@@ -522,6 +530,10 @@
 		608868751CE5D45600B2F55C /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				608F0ACF1CF2EC7B0074F3F0 /* TestController.swift */,
+				608F0AD11CF2EC8F0074F3F0 /* TestDataModel.swift */,
+				608F0AD31CF2ECB20074F3F0 /* TestViewModel.swift */,
+				608F0AD51CF2ECD00074F3F0 /* TestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -763,12 +775,14 @@
 				608F0AC11CF2A04D0074F3F0 /* View.swift in Sources */,
 				608F0ACB1CF2A0540074F3F0 /* ServiceType.swift in Sources */,
 				603EE3181CE96D910092ED3F /* HomeController.swift in Sources */,
+				608F0AD21CF2EC8F0074F3F0 /* TestDataModel.swift in Sources */,
 				601918251CEB0153008454DB /* ModelAdapter.swift in Sources */,
 				6082A0AC1CEED57A00350D1F /* NSObject+Rx.swift in Sources */,
 				603EE3341CE99AFB0092ED3F /* Service+common.swift in Sources */,
 				608F0AC01CF2A04D0074F3F0 /* Service.swift in Sources */,
 				608F0AC31CF2A04D0074F3F0 /* ViewModel.swift in Sources */,
 				60DB13161CE9B334006C8062 /* RACSignal+Extensions.swift in Sources */,
+				608F0AD01CF2EC7B0074F3F0 /* TestController.swift in Sources */,
 				6013F1BC1CE96ACB0053F75F /* NetworkService.swift in Sources */,
 				603EE32F1CE99AD10092ED3F /* UIColor+Extension.swift in Sources */,
 				608F0AC91CF2A0540074F3F0 /* DataModelType.swift in Sources */,
@@ -778,6 +792,8 @@
 				60DB13141CE9B31C006C8062 /* RACObserve.swift in Sources */,
 				60DB13121CE9B301006C8062 /* RAC.swift in Sources */,
 				6013F1BE1CE96AD40053F75F /* NetworkServiceImpl.swift in Sources */,
+				608F0AD61CF2ECD00074F3F0 /* TestView.swift in Sources */,
+				608F0AD41CF2ECB20074F3F0 /* TestViewModel.swift in Sources */,
 				603EE3301CE99AD10092ED3F /* UIView+Extension.swift in Sources */,
 				6013F1811CE953680053F75F /* Macros.swift in Sources */,
 				60DB130E1CE9AD1A006C8062 /* UIKit+Extensions.swift in Sources */,

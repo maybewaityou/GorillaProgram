@@ -21,6 +21,17 @@ class ViewController<VM: ViewModelType, DM: DataModelType>: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    convenience init(viewModel: VM, dataModel: DM) {
+        self.init()
+        self.viewModel = viewModel
+        self.dataModel = dataModel
+    }
+    
+    convenience init(viewModel: VM) {
+        self.init()
+        self.viewModel = viewModel
+    }
+    
     convenience init(dataModel: DM) {
         self.init()
         self.dataModel = dataModel

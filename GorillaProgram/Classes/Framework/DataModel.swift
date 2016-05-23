@@ -10,7 +10,7 @@ import UIKit
 
 enum DataModelEnum: String {
     case Home = "home"
-    
+    case Test = "Test"
     
 }
 

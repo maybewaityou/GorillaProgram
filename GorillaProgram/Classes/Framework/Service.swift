@@ -21,11 +21,24 @@ class Service: ServiceType {
         self.navController = navController
     }
 
+    func push(controller: UIViewController) {
+        navController.pushViewController(controller, animated: true)
+    }
+    
+    func push<DM : DataModel, VM : ViewModel<DM>>(dataModel: DM, controller: ViewController<VM, DM>, viewModel: VM) {
+        controller.viewModel = viewModel
+        controller.dataModel = dataModel
+        navController.pushViewController(controller, animated: true)
+    }
+    
     func push<DM : DataModel>(dataModel: DM) {
-        switch(dataModel.type) {
+        switch dataModel.type {
         case .Home:
-            let controller = HomeController.init()
-            controller.dataModel = dataModel
+            let controller = HomeController.init(dataModel: dataModel)
+            navController.pushViewController(controller, animated: true)
+        case .Test:
+            let viewModel = TestViewModel.init(service: self)
+            let controller = TestController.init(viewModel: viewModel, dataModel: dataModel)
             navController.pushViewController(controller, animated: true)
         }
     }
