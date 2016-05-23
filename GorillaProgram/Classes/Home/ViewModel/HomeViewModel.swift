@@ -31,7 +31,7 @@ class HomeViewModel: ViewModel<HomeDataModel> {
 //            .observable(.GET, url: "https://api.github.com", params: ["": ""], model: User())
 //            .subscribeNext { (user) in
 //                print("=====>>> \(user.dog?.dogName)")
-//        }.addDisposableTo(rx_disposeBag)
+//            }.addDisposableTo(rx_disposeBag)
 //        service.network()
 //            .producer(.GET, url: "https://api.github.com", params: ["": ""], model: User())
 //            .startWithNext { (user) in
