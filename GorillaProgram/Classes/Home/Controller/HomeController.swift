@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: ViewController<HomeViewModel, HomeDataModel> {
+class HomeController<DM: DataModel>: ViewController<HomeViewModel, DM> {
     
     // MARK: Private Method
     override func initDatas() {

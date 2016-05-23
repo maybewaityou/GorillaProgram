@@ -25,6 +25,7 @@ class Service: ServiceType {
         switch(dataModel.type) {
         case .Home:
             let controller = HomeController.init()
+            controller.dataModel = dataModel
             navController.pushViewController(controller, animated: true)
         }
     }
