@@ -21,7 +21,7 @@ enum MPModelType: Int {
     case Unknown
 }
 
-private let mp_queue = dispatch_queue_create("mp_model_queie_serial", DISPATCH_QUEUE_SERIAL)
+private let mp_queue = dispatch_queue_create("mp_model_queue_serial", DISPATCH_QUEUE_SERIAL)
 
 extension NSObject {
     
