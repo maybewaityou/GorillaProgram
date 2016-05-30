@@ -9,8 +9,8 @@
 import UIKit
 
 class User: Model {
-    
-    
+
+
     var age: String?
 
     var lastName: String?
@@ -20,7 +20,7 @@ class User: Model {
     var name: String?
 
     var books: [Book]?
-    
+
     /** 根据Key获取实体相关信息 */
     override func mp_modelPropertyClass() -> [String: AnyClass]? {
         return [
@@ -28,7 +28,7 @@ class User: Model {
             "dog": Dog.self
         ]
     }
-    
+
 }
 
 class Dog: NSObject {
