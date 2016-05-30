@@ -41,9 +41,9 @@ class HomeViewModel: ViewModel<HomeDataModel> {
         let dataModel = TestDataModel.init(type: .Test)
         service.push(dataModel)
         return service.network()
-            .signal(.GET, url: "https://api.github.com", params: ["": ""], model: User())
-            .doNextAs({ (model: User) in
-                print("=====>>> \(model.books)")
+            .signal(.GET, url: "https://api.github.com", params: ["": ""], model: Github())
+            .doNextAs({ (model: Github) in
+                print("=====>>> \(model.authorizations_url)")
             })
     }
     

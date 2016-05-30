@@ -70,9 +70,4 @@ class Github: Model {
 
     var user_search_url: String?
     
-    
-    deinit {
-        print("== deinit ===>>> \(self)")
-    }
-    
 }
