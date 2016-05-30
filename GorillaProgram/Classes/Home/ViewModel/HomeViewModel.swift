@@ -43,7 +43,7 @@ class HomeViewModel: ViewModel<HomeDataModel> {
         return service.network()
             .signal(.GET, url: "https://api.github.com", params: ["": ""], model: Github())
             .doNextAs({ (model: Github) in
-                print("=====>>> \(model.authorizations_url)")
+                print("=====>>> \(model)")
             })
     }
     
