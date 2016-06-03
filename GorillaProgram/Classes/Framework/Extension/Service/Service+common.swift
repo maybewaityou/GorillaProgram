@@ -27,4 +27,8 @@ extension Service {
         return navController
     }
     
+    func dismiss() {
+        navController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

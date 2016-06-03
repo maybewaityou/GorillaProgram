@@ -20,4 +20,6 @@ protocol ServiceType {
     
     func controller() -> UIViewController
     
+    func dismiss()
+    
 }

@@ -26,4 +26,6 @@ class NullableValue: ModelType, ViewModelType, ServiceType, DataModelType {
         return UIViewController.init()
     }
     
+    func dismiss() {}
+    
 }
