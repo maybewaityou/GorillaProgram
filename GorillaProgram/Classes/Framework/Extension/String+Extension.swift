@@ -1,5 +1,5 @@
 //
-//  FileManager.swift
+//  String+Extension.swift
 //  GorillaProgram
 //
 //  Created by ChunNan on 16/6/13.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class FileManager {
+extension String {
 
-    class func getSize(path: String) -> Int {
+    private func getFileSize() -> Int {
         let manager = NSFileManager.defaultManager()
-        let subpaths = manager.subpathsAtPath(path)
+        let subpaths = manager.subpathsAtPath(self)
         
         var size = 0
         
         for subpath in subpaths! {
-            let fullSubpath = path + "/" + subpath
+            let fullSubpath = self + "/" + subpath
             
             do {
                 let attrs = try manager.attributesOfItemAtPath(fullSubpath)
@@ -26,10 +26,11 @@ class FileManager {
         }
         return size
     }
-
-    class func getCachesSize() -> Int {
+    
+    func getCachesSize() -> Int {
         let cachesPath = NSSearchPathForDirectoriesInDomains(.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last
-        return getSize(cachesPath!)
+        return cachesPath!.getFileSize()
     }
+
     
 }
