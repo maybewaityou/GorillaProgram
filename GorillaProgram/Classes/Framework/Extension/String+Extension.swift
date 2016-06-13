@@ -10,20 +10,28 @@ import UIKit
 
 extension String {
 
-    private func getFileSize() -> Int {
-        let manager = NSFileManager.defaultManager()
-        let subpaths = manager.subpathsAtPath(self)
-        
+    func getFileSize() -> Int {
         var size = 0
+        let manager = NSFileManager.defaultManager()
         
-        for subpath in subpaths! {
-            let fullSubpath = self + "/" + subpath
-            
-            do {
-                let attrs = try manager.attributesOfItemAtPath(fullSubpath)
+        do {
+            let attrs = try manager.attributesOfItemAtPath(self)
+            if (attrs[NSFileType] as! String) == NSFileTypeDirectory {
+                let subpaths = manager.subpathsAtPath(self)
+                
+                for subpath in subpaths! {
+                    let fullSubpath = self + "/" + subpath
+                    
+                    do {
+                        let attrs = try manager.attributesOfItemAtPath(fullSubpath)
+                        size += (attrs[NSFileSize] as! Int)
+                    } catch {}
+                }
+            } else {
                 size += (attrs[NSFileSize] as! Int)
-            } catch {}
-        }
+            }
+        } catch {}
+        
         return size
     }
     
