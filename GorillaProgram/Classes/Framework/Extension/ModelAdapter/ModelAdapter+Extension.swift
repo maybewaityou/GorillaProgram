@@ -78,10 +78,10 @@ extension NSObject {
                                             if let properties = properties {
                                                 let obj = (properties[k] as! NSObject.Type).init()
                                                 objs.append(obj)
-                                                dispatch_async(mp_queue) {
+//                                                dispatch_async(mp_queue) {
                                                     //串行对列执行
                                                     obj.setDicValue(dic as! [String: AnyObject])
-                                                }
+//                                                }
                                             }
                                         }
                                         t.setValue(objs, forKey: k)
