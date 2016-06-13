@@ -26,6 +26,7 @@
 		601918251CEB0153008454DB /* ModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601918241CEB0153008454DB /* ModelAdapter.swift */; };
 		601918271CEB0C7C008454DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601918261CEB0C7C008454DB /* User.swift */; };
 		601CD9DC1D0E9627003F83EF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CD9DB1D0E9627003F83EF /* String+Extension.swift */; };
+		601CD9DE1D0E96C8003F83EF /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CD9DD1D0E96C8003F83EF /* UITextField+Extension.swift */; };
 		603EE3181CE96D910092ED3F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3171CE96D910092ED3F /* HomeController.swift */; };
 		603EE31C1CE96EA20092ED3F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE31B1CE96EA20092ED3F /* HomeViewModel.swift */; };
 		603EE31E1CE96F810092ED3F /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE31D1CE96F810092ED3F /* HomeDataModel.swift */; };
@@ -109,6 +110,7 @@
 		601918261CEB0C7C008454DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6019182C1CEB18B6008454DB /* GorillaProgram-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GorillaProgram-Bridging-Header.h"; sourceTree = "<group>"; };
 		601CD9DB1D0E9627003F83EF /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		601CD9DD1D0E96C8003F83EF /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		603EE3171CE96D910092ED3F /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		603EE31B1CE96EA20092ED3F /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		603EE31D1CE96F810092ED3F /* HomeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				603EE32D1CE99AD10092ED3F /* UIWindow+Extension.swift */,
 				60DB13061CE9AC4B006C8062 /* Method+Swizzling.swift */,
 				60DB130F1CE9AD4A006C8062 /* NSObject+Extension.swift */,
+				601CD9DD1D0E96C8003F83EF /* UITextField+Extension.swift */,
 				601CD9DB1D0E9627003F83EF /* String+Extension.swift */,
 			);
 			path = Extension;
@@ -790,6 +793,7 @@
 				603EE32F1CE99AD10092ED3F /* UIColor+Extension.swift in Sources */,
 				608F0AC91CF2A0540074F3F0 /* DataModelType.swift in Sources */,
 				603EE3311CE99AD10092ED3F /* UIWindow+Extension.swift in Sources */,
+				601CD9DE1D0E96C8003F83EF /* UITextField+Extension.swift in Sources */,
 				60EC72571CEABA4200134EE9 /* Github.swift in Sources */,
 				601918271CEB0C7C008454DB /* User.swift in Sources */,
 				60DB13141CE9B31C006C8062 /* RACObserve.swift in Sources */,
