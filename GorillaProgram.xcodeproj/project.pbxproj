@@ -37,6 +37,7 @@
 		603EE3301CE99AD10092ED3F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE32C1CE99AD10092ED3F /* UIView+Extension.swift */; };
 		603EE3311CE99AD10092ED3F /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE32D1CE99AD10092ED3F /* UIWindow+Extension.swift */; };
 		603EE3341CE99AFB0092ED3F /* Service+common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603EE3331CE99AFB0092ED3F /* Service+common.swift */; };
+		6072117F1D0E46A700A958A8 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6072117E1D0E46A700A958A8 /* FileManager.swift */; };
 		6082A0AC1CEED57A00350D1F /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0AB1CEED57A00350D1F /* NSObject+Rx.swift */; };
 		60834B8B1CE41A7500B60AB2 /* GorillaProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B8A1CE41A7500B60AB2 /* GorillaProgramTests.swift */; };
 		60834B961CE41A7500B60AB2 /* GorillaProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60834B951CE41A7500B60AB2 /* GorillaProgramUITests.swift */; };
@@ -119,6 +120,7 @@
 		603EE32C1CE99AD10092ED3F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		603EE32D1CE99AD10092ED3F /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		603EE3331CE99AFB0092ED3F /* Service+common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service+common.swift"; sourceTree = "<group>"; };
+		6072117E1D0E46A700A958A8 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		6082A0AB1CEED57A00350D1F /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		60834B721CE41A7500B60AB2 /* GorillaProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60834B811CE41A7500B60AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				603EE32D1CE99AD10092ED3F /* UIWindow+Extension.swift */,
 				60DB13061CE9AC4B006C8062 /* Method+Swizzling.swift */,
 				60DB130F1CE9AD4A006C8062 /* NSObject+Extension.swift */,
+				6072117E1D0E46A700A958A8 /* FileManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 				608F0AC31CF2A04D0074F3F0 /* ViewModel.swift in Sources */,
 				60DB13161CE9B334006C8062 /* RACSignal+Extensions.swift in Sources */,
 				608F0AD01CF2EC7B0074F3F0 /* TestController.swift in Sources */,
+				6072117F1D0E46A700A958A8 /* FileManager.swift in Sources */,
 				6013F1BC1CE96ACB0053F75F /* NetworkService.swift in Sources */,
 				603EE32F1CE99AD10092ED3F /* UIColor+Extension.swift in Sources */,
 				608F0AC91CF2A0540074F3F0 /* DataModelType.swift in Sources */,
