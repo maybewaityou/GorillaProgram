@@ -47,6 +47,7 @@ extension NSObject {
                     //复杂类型
                     let type = t.mp_getType(v)
                     if type == .Dictionary {
+                        
                         //是一个对象类型
                         if let dic1 = v as? [String: AnyObject] {
                             if t.respondsToSelector(#selector(NSObject.mp_modelPropertyClass)) {
