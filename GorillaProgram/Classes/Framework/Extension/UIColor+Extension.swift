@@ -110,6 +110,10 @@ extension UIColor {
     
     // MARK: Colors
     
+    static func random() -> UIColor {
+        return UIColor.init(red: CGFloat.init(arc4random_uniform(255)) / 255.0, green: CGFloat.init(arc4random_uniform(255)) / 255.0, blue: CGFloat.init(arc4random_uniform(255)) / 255.0, alpha: 1.0)
+    }
+    
     static func navy() -> UIColor {
         return UIColor(hex: 0x001f3f)
     }
